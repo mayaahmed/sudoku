@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.mayamohsinahmed.sudoku"
+        version   = "1.0.0">
+
+    <name>Soduku</name>
+
+    <description>
+        The Sudoku game app.
+    </description>
+
+    <author href= "https://mayaahmed.github.io/sudoku/" email="maya.ahmed@gmail.com">
+       Maya Mohsin Ahmed
+    </author>
+
+    <!-- Define the main entry-point to the application -->
+    <content src="index.html" />
+
+    
+ </widget>

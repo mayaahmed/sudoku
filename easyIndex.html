@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  Programmer : Maya Ahmed 
+      Files: index.html; soduku.css; soduku.js 
+      These files contains the codes for the Soduku game
+      Date: "July 19 2016" -->
+
+
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Punjiri: Web and Mobile Technologies.</title>
+		<link rel="stylesheet" type="text/css" href="sudoku.css">
+	</head>
+
+	<body>
+	
+		<div id="big_wrapper">
+
+          <div id="topStuff">
+
+          <header id="top_header">
+				<p> Sudoku <p id="flag">  Easy </p> </p>
+			</header>
+
+			<nav id="top_menu">
+				<ul>
+
+
+                  
+
+                  <li>
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">New Game</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="easyIndex.html">Easy</a>
+                      <a href="index.html">Standard  </a>
+                      <a href="advancedIndex.html">Advanced </a>
+                     
+                    </div>
+                  </div>
+                  </li>
+
+
+                  <li>
+                    <div id="myNav" class="overlay">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+                      <div class="overlay-content">
+                       <p> &copy; Punjiri Web and Mobile Technologies, 2016. </p>
+                       <p> Email: maya.ahmed@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <span style="font-size:30px; cursor:pointer" onclick="openNav()"> &equiv;</span>
+                  </li>
+                  
+
+                      
+                </ul>
+			</nav>
+            </div>
+     <section id="main_section">   
+
+          <form name="input">
+
+            <div id="inputDiv">
+              <div class="cell"  id="box11">
+                <input id="input11" type="text" />
+                <input id="input12" type="text" />
+                <input id="input13" type="text" />
+                <input id="input21" type="text" />
+                <input id="input22" type="text" />
+                <input id="input23" type="text" />
+                <input id="input31" type="text" />
+                <input id="input32" type="text" />
+                <input id="input33" type="text" />
+              </div>
+
+
+              <div class="cell" id="box12">
+                <input id="input14" type="text" />
+                <input id="input15" type="text" />
+                <input id="input16" type="text" />
+                <input id="input24" type="text" />
+                <input id="input25" type="text" />
+                <input id="input26" type="text" />
+                <input id="input34" type="text" />
+                <input id="input35" type="text" />
+                <input id="input36" type="text" />
+              </div>
+
+              <div class="cell" id="box13">
+                <input id="input17" type="text" />
+                <input id="input18" type="text" />
+                <input id="input19" type="text" />
+                <input id="input27" type="text" />
+                <input id="input28" type="text" />
+                <input id="input29" type="text" />
+                <input id="input37" type="text" />
+                <input id="input38" type="text" />
+                <input id="input39" type="text" />
+              </div>
+
+
+              <div class="cell" id="box21">
+                <input id="input41" type="text" />
+                <input id="input42" type="text" />
+                <input id="input43" type="text" />
+                <input id="input51" type="text" />
+                <input id="input52" type="text" />
+                <input id="input53" type="text" />
+                <input id="input61" type="text" />
+                <input id="input62" type="text" />
+                <input id="input63" type="text" />
+              </div>
+
+
+              <div class="cell" id="box22">
+                <input id="input44" type="text" />
+                <input id="input45" type="text" />
+                <input id="input46" type="text" />
+                <input id="input54" type="text" />
+                <input id="input55" type="text" />
+                <input id="input56" type="text" />
+                <input id="input64" type="text" />
+                <input id="input65" type="text" />
+                <input id="input66" type="text" />
+              </div>
+
+
+              <div class="cell" id="box23">
+                <input id="input47" type="text" />
+                <input id="input48" type="text" />
+                <input id="input49" type="text" />
+                <input id="input57" type="text" />
+                <input id="input58" type="text" />
+                <input id="input59" type="text" /><br/>
+                <input id="input67" type="text" />
+                <input id="input68" type="text" />
+                <input id="input69" type="text" />
+              </div>
+
+              <div class="cell" id="box31">
+                <input id="input71" type="text" />
+                <input id="input72" type="text" />
+                <input id="input73" type="text" />
+                <input id="input81" type="text" />
+                <input id="input82" type="text" />
+                <input id="input83" type="text" />
+                <input id="input91" type="text" />
+                <input id="input92" type="text" />
+                <input id="input93" type="text" />
+              </div>
+
+              <div class="cell" id="box32">
+                <input id="input74" type="text" />
+                <input id="input75" type="text" />
+                <input id="input76" type="text" />
+                <input id="input84" type="text" />
+                <input id="input85" type="text" />
+                <input id="input86" type="text" />
+                <input id="input94" type="text" />
+                <input id="input95" type="text" />
+                <input id="input96" type="text" />
+              </div>
+
+              <div class="cell" id="box33">
+                <input id="input77" type="text" />
+                <input id="input78" type="text" />
+                <input id="input79" type="text" />
+                <input id="input87" type="text" />
+                <input id="input88" type="text" />
+                <input id="input89" type="text" />
+                <input id="input97" type="text" />
+                <input id="input98" type="text" />
+                <input id="input99" type="text" /> 
+              </div>
+
+
+            <div id="buttons">
+
+ <input type="button" class="indexPlayButton" value="Submit Solution!"    onClick="run();" \>
+      
+              
+            </div>
+            
+            </section>
+          
+			
+        	</div>
+
+
+        <script src="sudoku.js"></script> 
+	</body>
+</html>
