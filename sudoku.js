@@ -243,7 +243,8 @@ function initial(){
       for(j=1;j<10;j++){
         if(sodukuUser[i-1][j-1] != 0){
           button[i][j].value=sodukuUser[i-1][j-1];
-          button[i][j].disabled=true;}
+          button[i][j].disabled=true;
+         }
       }}
 } //end of function
 
@@ -347,7 +348,7 @@ window.onclick = function(event) {
 
 function number_write(x)
 {
-
+  
   if(x>=0 && x<=9)
   {
     if(isNaN(text_box.value))
