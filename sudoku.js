@@ -3,7 +3,7 @@ var i=0;
 var text_box;
 
 function getTextBox(i,j){
-text_box= document.getElementById("input"+i+j);
+  text_box= document.getElementById("input"+i+j);
 }
 
 
@@ -369,11 +369,16 @@ else  text_box.value = num;
 }
 
 
+var field = document.createElement('input');
+field.setAttribute('type', 'text');
+document.body.appendChild(field);
 
-document.body.addEventListener( 'touchend', function(){
-    if( document.getElementById('yourInputFiled') )
-        document.getElementById('yourInputFiled').blur();    
-});
+setTimeout(function() {
+    field.focus();
+    setTimeout(function() {
+        field.setAttribute('style', 'display:none;');
+    }, 50);
+}, 50);
 
 
 
