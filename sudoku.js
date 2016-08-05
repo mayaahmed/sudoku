@@ -1,5 +1,13 @@
 var i=0;
 
+var text_box;
+
+function getTextBox(i,j){
+text_box= document.getElementById("input"+i+j);
+}
+
+
+
 var button =new Array(9);
 for(i=1;i<10;i++)
   button[i]=new Array(9);
@@ -334,6 +342,31 @@ window.onclick = function(event) {
   }
 }
 
+
+
+
+function number_write(x)
+{
+
+  if(x>=0 && x<=9)
+  {
+    if(isNaN(text_box.value))
+   text_box.value = 0;
+ text_box.value = (text_box.value * 10)+x;
+  }
+}
+
+function number_c()
+{
+ 
+  var num = text_box.value;
+  var num1 = num%10;
+  num -= num1;
+  num /= 10;
+  if(num==0)
+    text_box.value = "";
+else  text_box.value = num;
+}
 
 
 

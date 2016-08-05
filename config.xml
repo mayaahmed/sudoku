@@ -7,7 +7,7 @@
         id        = "com.mayamohsinahmed.sudoku"
         version   = "1.0.0">
 
-    <name>Soduku</name>
+    <name>Sudoku</name>
 
     <description>
         The Sudoku game app.

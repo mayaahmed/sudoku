@@ -62,6 +62,7 @@ float:right;
 #main_section{
     margin: 20px auto;
 	-webkit-box-flex: 1;
+
 }
 
 
@@ -71,7 +72,7 @@ float:right;
   margin: 25px auto;
     opacity=0.7
    background:  #E0E0E0; 
-   
+ padding: 5px;
 }
 
 div.cell{
@@ -132,21 +133,20 @@ background: #E0E0E0;
 
 
 .indexPlayButton:hover{
-    font-size: 16px;
-    opacity: 0.8;
+    font-size: 17px;
+    opacity: 0.9;
     cursor: pointer;
 }
 
 
 .indexPlayButton{
     width: 210px;  height: 35px;
-     box-shadow: 3px 3px 15px #E0E0E0; 
-    text-shadow: 5px 5px 30px #1c1c1c;
-    font-size: 15px; opacity=0.7;
-    border: 2px solid #1c1c1c;
+     box-shadow: 1px 1px 15px #E0E0E0; 
+    text-shadow: 1px 1px 15px #1c1c1c;
+    font-size: 16px; opacity=0.7;
+    border: 2px solid #E0E0E0; 
     border-radius: 15px;
-    background-color:  #E0E0E0; 
-
+    background-color:  #CCE5FF;
 }
 
 
@@ -250,5 +250,41 @@ background: #E0E0E0;
     top: 15px;
     right: 35px;
   }
+}
+
+
+.main_panel
+{
+clear: both;
+padding: 10px;
+ 
+}
+
+
+.number_button
+{
+
+width:25px;
+height:25px;
+margin:2px;
+float:left;
+background-color: #CCE5FF;
+border-radius: 2px;
+font-size:22px;
+text-align:center;
+opacity: 0.7;
+}
+.number_button:hover
+{
+opacity: 0.9;
+}
+
+
+.text_box
+{
+width:250px; 
+height:30px;
+font-size:24px;
+text-align:right;
 }
 
