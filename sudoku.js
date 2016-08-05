@@ -370,7 +370,10 @@ else  text_box.value = num;
 
 
 
-
+document.body.addEventListener( 'touchend', function(){
+    if( document.getElementById('yourInputFiled') )
+        document.getElementById('yourInputFiled').blur();    
+});
 
 
 
