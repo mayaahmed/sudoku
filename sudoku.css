@@ -107,15 +107,15 @@ opacity:0.7
 }
 
 
-input[type=text] {
-    width: 20px;  height: 20px;
+.textButton {
+    width: 24px;  height: 24px;
     box-shadow: 20px 20px 50px gray;
     text-align:center;
-    font-size:22px;
+    font-size:20px;
 }
 
 
-input[type=text]:hover
+.textButton[type=button]:hover
 {
 background: #E0E0E0; 
 }
@@ -131,14 +131,6 @@ background: #E0E0E0;
     opacity:0.7;
 }
 
-
-.indexPlayButton:hover{
-    font-size: 17px;
-    opacity: 0.9;
-    cursor: pointer;
-}
-
-
 .indexPlayButton{
     width: 210px;  height: 35px;
      box-shadow: 1px 1px 15px #E0E0E0; 
@@ -148,6 +140,16 @@ background: #E0E0E0;
     border-radius: 15px;
     background-color:  #CCE5FF;
 }
+
+
+
+.indexPlayButton:hover{
+    font-size: 17px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
 
 
 
