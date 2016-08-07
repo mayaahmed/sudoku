@@ -1,5 +1,13 @@
 var i=0;
 
+var text_box;
+
+function getTextBox(i,j){
+  text_box= document.getElementById("input"+i+j);
+}
+
+
+
 var button =new Array(9);
 for(i=1;i<10;i++)
   button[i]=new Array(9);
@@ -235,7 +243,8 @@ function initial(){
       for(j=1;j<10;j++){
         if(sodukuUser[i-1][j-1] != 0){
           button[i][j].value=sodukuUser[i-1][j-1];
-          button[i][j].disabled=true;}
+          button[i][j].disabled=true;
+         }
       }}
 } //end of function
 
@@ -337,7 +346,41 @@ window.onclick = function(event) {
 
 
 
+function number_write(x)
+{
+  
+  if(x>=0 && x<=9)
+  {
+    text_box.style.color= "maroon";
+    if(isNaN(text_box.value))
+   text_box.value = 0;
+ text_box.value = (text_box.value * 10)+x;
+  }
+}
 
+function number_c()
+{
+ 
+  var num = text_box.value;
+  var num1 = num%10;
+  num -= num1;
+  num /= 10;
+  if(num==0)
+    text_box.value = "";
+else  text_box.value = num;
+}
+
+
+var field = document.createElement('input');
+field.setAttribute('type', 'text');
+document.body.appendChild(field);
+
+setTimeout(function() {
+    field.focus();
+    setTimeout(function() {
+        field.setAttribute('style', 'display:none;');
+    }, 50);
+}, 50);
 
 
 
