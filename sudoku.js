@@ -351,6 +351,7 @@ function number_write(x)
   
   if(x>=0 && x<=9)
   {
+    text_box.style.color= "maroon";
     if(isNaN(text_box.value))
    text_box.value = 0;
  text_box.value = (text_box.value * 10)+x;

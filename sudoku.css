@@ -71,8 +71,6 @@ float:right;
   width:500px; height: 
   margin: 20px auto;
     opacity=0.7
-   background:  #E0E0E0; 
-    padding: 3px;
 }
 
 div.cell{
@@ -131,10 +129,12 @@ background:  #CCE5FF;
     width: 210px;  height: 35px;
      box-shadow: 1px 1px 15px #E0E0E0; 
     text-shadow: 1px 1px 15px #1c1c1c;
-    font-size: 16px; opacity=0.7;
-    border: 2px solid #E0E0E0; 
+    font: 16px Tahoma; opacity=0.7;
+    border: 2px solid  #CCE5FF;
     border-radius: 15px;
-    background-color:  #CCE5FF;
+    background-color:  #E0E0E0; 
+    opacity:0.7;
+ 
 }
 
 
