@@ -97,10 +97,11 @@ float:left;
 
 
 .textButton {
+    background: white;
     width: 27px;  height: 27px;
     text-align: center;
     font-size: 25px;
-   box-shadow: 1px 1px 15px gray;
+    box-shadow: 1px 1px 15px gray;
    
 
 }
