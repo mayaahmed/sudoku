@@ -1,0 +1,1 @@
+ numberDeletedCells=3;

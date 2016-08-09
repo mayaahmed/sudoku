@@ -1,5 +1,5 @@
 var i=0;
-
+// numberDeletedCells=5;
 var text_box;
 
 function getTextBox(i,j){
@@ -41,10 +41,18 @@ sodukuUser[i]=new Array(9);
 for(i=0;i<9;i++){
  for(j=0;j<9;j++){
    sodukuUser[i][j]=0;}}
- 
 
+/*
+function changeNumberOfCellsToDelete(numCells){
+  numberDeletedCells = numCells;
+} 
+*/
 
 function generate(){
+
+  var i; var j;
+
+  /* Construct a starting sudoku */
  
 //top three row entries
 
@@ -80,13 +88,32 @@ soduku[6+j][2+3*i]=soduku[j+3][0+3*i];
 }
 }
 
+/* now permute this sudoku to get a new one */
+
+
 soduku = columnPermuteVector(soduku,1,2, 9);
 soduku = columnPermuteVector(soduku,7,8, 9);
 soduku = rowPermuteVector(soduku,0,2, 9);
 soduku = rowPermuteVector(soduku,3,4, 9);
 soduku = rowPermuteVector(soduku,7,8, 9);
 
+
+
+/* permute randomly for new game */
+for(i=0; i<5; i++){
 soduku= premuteRowsRandomly(soduku);
+soduku= premuteColumnsRandomly(soduku);}
+
+
+for(z=0; z<10; z++){
+soduku = swapElements(soduku);}
+
+for(z=0; z<20; z++)
+soduku = SwapOneElement(soduku);
+
+for(z=0; z<10; z++){
+soduku = swapElements(soduku);}
+
 
 //Copying Dsoduku
 for(i=0;i<9;i++){
@@ -164,7 +191,7 @@ function deleteEntries(a){
  var i=0;  var k=0;
  var r=Math.random();
   for(k=0;k<9;k++){
-   for(i=0;i<5;i++){
+   for(i=0;i<numberDeletedCells;i++){
      r=Math.random();
       if(r<0.1) a[k][0]=0;
       else if (r<0.2) a[k][1]=0;
@@ -181,6 +208,11 @@ return a;
 }//end of fn
 
 
+
+
+
+
+
 function premuteRowsRandomly(a){
  var r=Math.random(); var s=Math.random();
    if(s<0.3 && r<0.5)
@@ -195,6 +227,25 @@ function premuteRowsRandomly(a){
      rowPermuteVector(a, 6, 7, 9);
    else if(s<1 && r<1)
      rowPermuteVector(a, 6, 8, 9);
+return a;
+
+}//end of fn
+
+
+function premuteColumnsRandomly(a){
+ var r=Math.random(); var s=Math.random();
+   if(s<0.3 && r<0.5)
+     columnPermuteVector(a, 0, 1, 9);
+   else if(s<0.3 && r<1)
+     columnPermuteVector(a, 0, 2, 9);
+   else if(s<0.6 && r<0.5)
+     columnPermuteVector(a, 3, 4, 9);
+   else if(s<0.6 && r<1)
+     columnPermuteVector(a, 3, 5, 9);
+   else if(s<1 && r<0.5)
+     columnPermuteVector(a, 6, 7, 9);
+   else if(s<1 && r<1)
+     columnPermuteVector(a, 6, 8, 9);
 return a;
 
 }//end of fn
@@ -383,16 +434,101 @@ setTimeout(function() {
 }, 50);
 
 
+function swapElements(a){
+  var u; var v;   var t=100; var u; var v;
+var p=Math.random(); 
+var q=Math.random(); 
+
+      if(p<0.1) u=1;
+      else if(p<0.2) u=2; 
+      else if(p<0.3) u=3; 
+      else if(p<0.4) u=4; 
+      else if(p<0.5)  u=5; 
+      else if(p<0.6)  u=6; 
+      else if(p<0.7) u=7;
+      else if(p<0.8) u=8;
+      else u=9;
+
+
+     if(q<0.1) v=1;
+      else if(q<0.2) v=2; 
+      else if(q<0.3) v=3; 
+      else if(q<0.4) v=4; 
+      else if(q<0.5)  v=5; 
+      else if(q<0.6)  v=6; 
+      else if(q<0.7) v=7;
+      else if(q<0.8) v=8;
+      else v=9;
+
+for(i=0; i<9; i++){
+for(j=0; j<9; j++){
+if(a[i][j]==u) a[i][j]=t;}}
+
+for(i=0; i<9; i++){
+for(j=0; j<9; j++){
+if(a[i][j]==v) a[i][j]=u;}}
+
+for(i=0; i<9; i++){
+for(j=0; j<9; j++){
+if(a[i][j]==t) a[i][j]=v;}}
+
+return a;
+}
+
+ function SwapOneElement(a){
+var r1=Math.random(); var r2=Math.random(); var s=Math.random(); 
+var c=Math.random();
+var row1; var row2; var col; var t1; var t2; var section;
+var p; var q;
+
+if(s<0.3) section=0; 
+  else if(s<0.6) section=3; 
+  else  section=6; 
+     
+if(r1<0.3) row1=0; 
+  else if(r1<0.6) row1=1; 
+  else row1=2; 
+
+if(r2<0.3) row2=0; 
+  else if(r2<0.6) row2=1; 
+  else row2=2; 
+
+if(c<0.3) col =0; 
+  else if(c<0.6) col =1; 
+  else col=2; 
+
+
+
+if(row1==row2){
+     if(row1<2) row2=row1+1;
+     else row2=row1-1;
+}
+
+t1= a[section+row1][col] ; 
+t2= a[section+row2][col] ; 
+
+
+
+     
+ for(p=0; p<3; p++){
+               for(q=0; q<9; q++){
+                        if(a[section+p][q]== t1) a[section+p][q] = 100;
+                        if(a[section+p][q]== t2)   a[section+p][q] = t1; } }   
+
+for(p=0; p<3; p++){
+               for(q=0; q<9; q++){
+                        if(a[section+p][q]== 100) a[section+p][q] = t2; }}
+
+
+
+
+return a;
+}
 
 
 
 
 
 
-
-
-
-   
-       
 
 

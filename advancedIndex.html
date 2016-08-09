@@ -21,7 +21,8 @@
           <div id="topStuff">
 
           <header id="top_header">
-				<p> Sudoku <p id="flag"> Advanced </p> </p>
+				<p> Sudoku</p>
+                <p id="flag"> Advanced game </p>  
 			</header>
 
 			<nav id="top_menu">
@@ -59,6 +60,10 @@
                       
                 </ul>
 			</nav>
+
+
+
+
             </div>
      <section id="main_section">   
 
@@ -66,130 +71,143 @@
 
             <div id="inputDiv">
               <div class="cell"  id="box11">
-                <input id="input11" type="text" />
-                <input id="input12" type="text" />
-                <input id="input13" type="text" />
-                <input id="input21" type="text" />
-                <input id="input22" type="text" />
-                <input id="input23" type="text" />
-                <input id="input31" type="text" />
-                <input id="input32" type="text" />
-                <input id="input33" type="text" />
+                <input id="input11" type="button" class="textButton" onclick="getTextBox(1,1)" onclick="getTextBox(1,1)" />
+                <input id="input12" type="button" class="textButton" onclick="getTextBox(1,2)" />
+                <input id="input13" type="button" class="textButton" onclick="getTextBox(1,3)" />
+                <input id="input21" type="button" class="textButton" onclick="getTextBox(2,1)" />
+                <input id="input22" type="button" class="textButton" onclick="getTextBox(2,2)" />
+                <input id="input23" type="button" class="textButton" onclick="getTextBox(2,3)" />
+                <input id="input31" type="button" class="textButton" onclick="getTextBox(3,1)" />
+                <input id="input32" type="button" class="textButton" onclick="getTextBox(3,2)" />
+                <input id="input33" type="button" class="textButton" onclick="getTextBox(3,3)" />
               </div>
 
 
               <div class="cell" id="box12">
-                <input id="input14" type="text" />
-                <input id="input15" type="text" />
-                <input id="input16" type="text" />
-                <input id="input24" type="text" />
-                <input id="input25" type="text" />
-                <input id="input26" type="text" />
-                <input id="input34" type="text" />
-                <input id="input35" type="text" />
-                <input id="input36" type="text" />
+                <input id="input14" type="button" class="textButton" onclick="getTextBox(1,4)" />
+                <input id="input15" type="button" class="textButton" onclick="getTextBox(1,5)" />
+                <input id="input16" type="button" class="textButton" onclick="getTextBox(1,6)" />
+                <input id="input24" type="button" class="textButton" onclick="getTextBox(2,4)" />
+                <input id="input25" type="button" class="textButton" onclick="getTextBox(2,5)" />
+                <input id="input26" type="button" class="textButton" onclick="getTextBox(2,6)" />
+                <input id="input34" type="button" class="textButton" onclick="getTextBox(3,4)" />
+                <input id="input35" type="button" class="textButton" onclick="getTextBox(3,5)" />
+                <input id="input36" type="button" class="textButton" onclick="getTextBox(3,6)" />
               </div>
 
               <div class="cell" id="box13">
-                <input id="input17" type="text" />
-                <input id="input18" type="text" />
-                <input id="input19" type="text" />
-                <input id="input27" type="text" />
-                <input id="input28" type="text" />
-                <input id="input29" type="text" />
-                <input id="input37" type="text" />
-                <input id="input38" type="text" />
-                <input id="input39" type="text" />
+                <input id="input17" type="button" class="textButton" onclick="getTextBox(1,7)" />
+                <input id="input18" type="button" class="textButton" onclick="getTextBox(1,8)" />
+                <input id="input19" type="button" class="textButton" onclick="getTextBox(1,9)" />
+                <input id="input27" type="button" class="textButton" onclick="getTextBox(2,7)" />
+                <input id="input28" type="button" class="textButton" onclick="getTextBox(2,8)" />
+                <input id="input29" type="button" class="textButton" onclick="getTextBox(2,9)" />
+                <input id="input37" type="button" class="textButton" onclick="getTextBox(3,7)" />
+                <input id="input38" type="button" class="textButton" onclick="getTextBox(3,8)" />
+                <input id="input39" type="button" class="textButton" onclick="getTextBox(3,9)" />
               </div>
 
 
               <div class="cell" id="box21">
-                <input id="input41" type="text" />
-                <input id="input42" type="text" />
-                <input id="input43" type="text" />
-                <input id="input51" type="text" />
-                <input id="input52" type="text" />
-                <input id="input53" type="text" />
-                <input id="input61" type="text" />
-                <input id="input62" type="text" />
-                <input id="input63" type="text" />
+                <input id="input41" type="button" class="textButton" onclick="getTextBox(4,1)" />
+                <input id="input42" type="button" class="textButton" onclick="getTextBox(4,2)" />
+                <input id="input43" type="button" class="textButton" onclick="getTextBox(4,3)" />
+                <input id="input51" type="button" class="textButton" onclick="getTextBox(5,1)" />
+                <input id="input52" type="button" class="textButton" onclick="getTextBox(5,2)" />
+                <input id="input53" type="button" class="textButton" onclick="getTextBox(5,3)" />
+                <input id="input61" type="button" class="textButton" onclick="getTextBox(6,1)" />
+                <input id="input62" type="button" class="textButton" onclick="getTextBox(6,2)" />
+                <input id="input63" type="button" class="textButton" onclick="getTextBox(6,3)" />
               </div>
 
 
               <div class="cell" id="box22">
-                <input id="input44" type="text" />
-                <input id="input45" type="text" />
-                <input id="input46" type="text" />
-                <input id="input54" type="text" />
-                <input id="input55" type="text" />
-                <input id="input56" type="text" />
-                <input id="input64" type="text" />
-                <input id="input65" type="text" />
-                <input id="input66" type="text" />
+                <input id="input44" type="button" class="textButton" onclick="getTextBox(4,4)" />
+                <input id="input45" type="button" class="textButton" onclick="getTextBox(4,5)" />
+                <input id="input46" type="button" class="textButton" onclick="getTextBox(4,6)" />
+                <input id="input54" type="button" class="textButton" onclick="getTextBox(5,4)" />
+                <input id="input55" type="button" class="textButton" onclick="getTextBox(5,5)" />
+                <input id="input56" type="button" class="textButton" onclick="getTextBox(5,6)" />
+                <input id="input64" type="button" class="textButton" onclick="getTextBox(6,4)" />
+                <input id="input65" type="button" class="textButton" onclick="getTextBox(6,5)" />
+                <input id="input66" type="button" class="textButton" onclick="getTextBox(6,6)" />
               </div>
 
 
               <div class="cell" id="box23">
-                <input id="input47" type="text" />
-                <input id="input48" type="text" />
-                <input id="input49" type="text" />
-                <input id="input57" type="text" />
-                <input id="input58" type="text" />
-                <input id="input59" type="text" /><br/>
-                <input id="input67" type="text" />
-                <input id="input68" type="text" />
-                <input id="input69" type="text" />
+                <input id="input47" type="button" class="textButton" onclick="getTextBox(4,7)" />
+                <input id="input48" type="button" class="textButton" onclick="getTextBox(4,8)" />
+                <input id="input49" type="button" class="textButton" onclick="getTextBox(4,9)" />
+                <input id="input57" type="button" class="textButton" onclick="getTextBox(5,7)" />
+                <input id="input58" type="button" class="textButton" onclick="getTextBox(5,8)" />
+                <input id="input59" type="button" class="textButton" onclick="getTextBox(5,9)" />
+                <input id="input67" type="button" class="textButton" onclick="getTextBox(6,7)" />
+                <input id="input68" type="button" class="textButton" onclick="getTextBox(6,8)" />
+                <input id="input69" type="button" class="textButton" onclick="getTextBox(6,9)" />
               </div>
 
               <div class="cell" id="box31">
-                <input id="input71" type="text" />
-                <input id="input72" type="text" />
-                <input id="input73" type="text" />
-                <input id="input81" type="text" />
-                <input id="input82" type="text" />
-                <input id="input83" type="text" />
-                <input id="input91" type="text" />
-                <input id="input92" type="text" />
-                <input id="input93" type="text" />
+                <input id="input71" type="button" class="textButton" onclick="getTextBox(7,1)" />
+                <input id="input72" type="button" class="textButton" onclick="getTextBox(7,2)" />
+                <input id="input73" type="button" class="textButton" onclick="getTextBox(7,3)" />
+                <input id="input81" type="button" class="textButton" onclick="getTextBox(8,1)" />
+                <input id="input82" type="button" class="textButton" onclick="getTextBox(8,2)" />
+                <input id="input83" type="button" class="textButton" onclick="getTextBox(8,3)" />
+                <input id="input91" type="button" class="textButton" onclick="getTextBox(9,1)" />
+                <input id="input92" type="button" class="textButton" onclick="getTextBox(9,2)" />
+                <input id="input93" type="button" class="textButton" onclick="getTextBox(9,3)" />
               </div>
 
               <div class="cell" id="box32">
-                <input id="input74" type="text" />
-                <input id="input75" type="text" />
-                <input id="input76" type="text" />
-                <input id="input84" type="text" />
-                <input id="input85" type="text" />
-                <input id="input86" type="text" />
-                <input id="input94" type="text" />
-                <input id="input95" type="text" />
-                <input id="input96" type="text" />
+                <input id="input74" type="button" class="textButton" onclick="getTextBox(7,4)" />
+                <input id="input75" type="button" class="textButton" onclick="getTextBox(7,5)" />
+                <input id="input76" type="button" class="textButton" onclick="getTextBox(7,6)" />
+                <input id="input84" type="button" class="textButton" onclick="getTextBox(8,4)" />
+                <input id="input85" type="button" class="textButton" onclick="getTextBox(8,5)" />
+                <input id="input86" type="button" class="textButton" onclick="getTextBox(8,6)" />
+                <input id="input94" type="button" class="textButton" onclick="getTextBox(9,4)" />
+                <input id="input95" type="button" class="textButton" onclick="getTextBox(9,5)" />
+                <input id="input96" type="button" class="textButton" onclick="getTextBox(9,6)" />
               </div>
 
               <div class="cell" id="box33">
-                <input id="input77" type="text" />
-                <input id="input78" type="text" />
-                <input id="input79" type="text" />
-                <input id="input87" type="text" />
-                <input id="input88" type="text" />
-                <input id="input89" type="text" />
-                <input id="input97" type="text" />
-                <input id="input98" type="text" />
-                <input id="input99" type="text" /> 
+                <input id="input77" type="button" class="textButton" onclick="getTextBox(7,7)" />
+                <input id="input78" type="button" class="textButton" onclick="getTextBox(7,8)" />
+                <input id="input79" type="button" class="textButton" onclick="getTextBox(7,9)" />
+                <input id="input87" type="button" class="textButton" onclick="getTextBox(8,7)" />
+                <input id="input88" type="button" class="textButton" onclick="getTextBox(8,8)" />
+                <input id="input89" type="button" class="textButton" onclick="getTextBox(8,9)" />
+                <input id="input97" type="button" class="textButton" onclick="getTextBox(9,7)" />
+                <input id="input98" type="button" class="textButton" onclick="getTextBox(9,8)" />
+                <input id="input99" type="button" class="textButton" onclick="getTextBox(9,9)" /> 
               </div>
 
 
-            <div id="buttons">
 
+
+<div class="main_panel">
+
+
+<div class="number_button" onclick="number_write(1);">1</div>
+<div class="number_button" onclick="number_write(2);">2</div>
+<div class="number_button" onclick="number_write(3);">3</div>
+<div class="number_button" onclick="number_write(4);">4</div>
+<div class="number_button" onclick="number_write(5);">5</div>
+<div class="number_button" onclick="number_write(6);">6</div>
+<div class="number_button" onclick="number_write(7);">7</div>
+<div class="number_button" onclick="number_write(8);">8</div>
+<div class="number_button" onclick="number_write(9);">9</div>
+<div class="number_button" onclick="number_c();">&#8592;</div>
+</div>
+
+
+<div id="buttons">
  <input type="button" class="indexPlayButton" value="Submit Solution!"    onClick="run();" \>
-      
-              
-            </div>
-            
-            </section>
-          
-			
-        	</div>
-
+      </div>
+                     
+ </section>
+     </div>
+<script src="numCellsAdvanced.js"></script> 
 
         <script src="sudoku.js"></script> 
 	</body>
