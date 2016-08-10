@@ -60,6 +60,12 @@ function generate(){
 for(j=0;j<9;j++)
 soduku[0][j]=j+1;
 
+// prefer permuted first row 3,7,5,9,4,2,8,1,6
+soduku[0][0]=3; soduku[0][1]=7; soduku[0][2]=5;
+soduku[0][3]=9; soduku[0][4]=4; soduku[0][5]=2;
+soduku[0][6]=8; soduku[0][7]=1; soduku[0][8]=6;
+
+
 //secod row
 for(j=0;j<6;j++)
 soduku[1][j]=soduku[0][j+3];

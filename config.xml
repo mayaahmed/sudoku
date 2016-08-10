@@ -20,5 +20,12 @@
     <!-- Define the main entry-point to the application -->
     <content src="index.html" />
 
+
+<icon src="mdpi.png" platform="android" qualifier="mdpi" />
+<icon src="hdpi.png" platform="android" qualifier="hdpi" />
+<icon src="xhdpi.png" platform="android" qualifier="xhdpi" />
+<icon src="xxhdpi.png" platform="android" qualifier="xxhdpi" />
+
+
     
  </widget>
