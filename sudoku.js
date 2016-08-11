@@ -1,6 +1,9 @@
 var i=0;
 // numberDeletedCells=5;
 var text_box;
+ErrorRowArray=new Array(9);
+for(i=0; i<9; i++)
+  ErrorRowArray[i]=0;
 
 function getTextBox(i,j){
   text_box= document.getElementById("input"+i+j);
@@ -274,11 +277,16 @@ function makeStringOfArray(array){
 
 
 function checkIsSoduku(a){
+
+
   sum=0;   count=0;
   for(i=0;i<9;i++){
    for(j=0;j<9;j++)
      sum=sum+a[i][j];
-   if(sum != 45)  count=count+1; 
+   if(sum != 45){
+     ErrorRowArray[i]=i+1;
+  count=count+1; 
+   }
    sum=0;
   }
 return count;
@@ -310,7 +318,7 @@ initial();
 function run(){
   var i=1; var j=1;
   var inputInt;
-  var errorCheck=1;
+  var errorCheck=1;  var errorRowString="-"; var t;
   
   var errorArray= new Array(9);
   for(i=0; i<9; i++) 
@@ -352,16 +360,24 @@ function run(){
           errorString= errorString+errorArray[i][j]+'\n';
       }
     }
-  alert(errorString);
+  alert(errorString + ' \n You can correct the errors and submit again. \n');
   } 
 
 
   // No errors in input
   else{
     var noOfErrors = checkIsSoduku(sodukuUser); //check for errors in user's solution
-    if(noOfErrors!=0)
-      alert('Sorry: '+noOfErrors+ ' rows  have wrong entries. \n \n'+ 'One solution to this puzzle is: \n \n'+ sodukuString);
-    else alert('Cogratulations! You made it.');  
+    if(noOfErrors!=0){
+      for(i=0;i<9;i++){
+        if(ErrorRowArray[i]>0){ t=i+1;
+          errorRowString = errorRowString+'-'+t;}
+     }
+
+ alert('Sorry: The number of errors is '+ noOfErrors+  '. \n ' + 'Rows '+  errorRowString + ' have wrong entries. \n \n'+ 'You can correct the errors and submit again. \n' +'One solution to this puzzle is: \n \n'+ sodukuString);
+    }
+
+
+   else alert('Cogratulations! You made it.');  
   }
   
 } // end of function
