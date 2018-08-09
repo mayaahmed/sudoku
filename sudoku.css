@@ -18,7 +18,8 @@ body{
 	width: 100%;
 	display: -webkit-box;
 	-webkit-box-pack: center;
-    background: #1c1c1c;
+ background: linear-gradient(black, gray);
+  //  background: #1c1c1c;
 }
 #big_wrapper{
 	max-width: 1000px;
@@ -183,7 +184,7 @@ background:  #CCE5FF;
 }
 
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {background-color:#CCE5FF;}
 
 .show {display:block;}
 
