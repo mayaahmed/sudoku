@@ -44,7 +44,7 @@ div.cell{
 .textButton {
     float:left;
     background: white;
-    width: 23px;  height: 23px;
+    width: 23.5px;  height: 23.5px;
     text-align: center;
     font-size: 16px;
     box-shadow: 1px 0px 2px gray;
@@ -73,7 +73,7 @@ div.cell{
     float:left;
     background-color: #CCE5FF;
     border-radius: 2px;
-    font-size:16px;
+    font-size:15px;
     text-align:center;
     opacity: 0.7;
 }
