@@ -75,10 +75,9 @@ ul{
     opacity=0.7
 }
 
-div.cell{
-padding: 1px;
-width: 100px;
-height: 100px;
+.cell{
+padding: 2px; width: 80px;
+height: 80px;
 float: left;
 opacity=0.7;
 
@@ -87,9 +86,9 @@ opacity=0.7;
 
 .textButton {
     background: white;
-    width: 20px;  height: 20px;
+    width: 16px;  height: 16px;
     text-align: center;
-    font: 16px bold;
+    font: 12px bold;
     box-shadow: 1px 1px 1px gray;
  
 
@@ -125,31 +124,30 @@ opacity=0.7;
 
 
 
-
-
 .indexPlayButton{
-
-
-    margin-top: 5px;
-    margin-left: 100px ;
-    width: 200px;  height: 40px;
-    box-shadow: 1px 1px 5px gray;
-    font: 16px Tahoma; 
-    border: 2px solid gray;
-    border-radius: 10px;
-    background: linear-gradient(#CCE5FF, black);
-
+ clear:both;
+    float:left;
+    width: 125px;  height: 20px;
+     box-shadow: 1px 1px 15px #E0E0E0; 
+    font: 12px Tahoma; 
+    border: 2px solid  #CCE5FF;
+    border-radius: 15px;
+    background-color: white;
     opacity:0.8;
-    
+ margin-top: 5px;
+margin-left:100px;
 }
 
 
 
 .indexPlayButton:hover{
-    font-size: 17px;
+    font-size: 13px;
     opacity: 0.9;
     cursor: pointer;
 }
+
+
+
 
 
 .dropbtn {
@@ -208,13 +206,13 @@ opacity=0.7;
 .number_button
 {
 
-    width:20px;
-    height:20px;
+    width:16px;
+    height:16px;
     margin:2px;
     float:left;
     background-color: #CCE5FF;
     border-radius: 2px;
-    font-size:18px;
+    font-size:14px;
     text-align:center;
     opacity: 0.7;
 }
