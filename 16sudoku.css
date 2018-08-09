@@ -1,223 +1,104 @@
-*
-{
-    margin: 0px;
-	padding: 0px;
-}
-
-h1{
-	font: bold 20px Tahoma;
-}
-h2{
-	font: bold 14px Tahoma;
-}
-
-header, section, footer, aside, nav, article, hgroup{
-	display: block;
-}
-body{
-	width: 100%;
-	display: -webkit-box;
-	-webkit-box-pack: center;
-  background: linear-gradient(black, gray);
-//  background: #1c1c1c;
-}
-#big_wrapper{
-	max-width: 1000px;
-	margin: 20px 0px;
-	display:-webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-box-flex: 1;
-}
-
-#topStuff{
-
-    opacity:0.7;
-	border-bottom: 2px solid  #CCE5FF;
-}
-
-#top_header{
-	font: bold 25px Tahoma; 
-    color: #CCE5FF;
-
-   //  opacity:0.9;
-	}
-
-#flag{
-font-size: 11px;
-}
-
-ul{
-float:right;
-}
-
-#top_menu li{
-    
-	display: inline-block;
-	list-style: none;
-	font: bold 25px Tahoma;
-    color:#CCE5FF; 
-}
-    
 
 #main_section{
     margin: 20px auto;
-	-webkit-box-flex: 1;
-
-
+    -webkit-box-flex: 1;
 }
 
 
 #inputDiv
 {
-  width:500px; height: 500px;
-  margin: 20px auto auto 15px;
-   opacity=0.7
+    width:500px; height: 500;
+    margin: 20px auto auto 15px;
+    opacity=0.7
 }
 
 div.cell{
-// background:#2C2B2B;
-width: 105px;
-height:105px;
-float: left;
-opacity=0.7;
-padding-top: 5px; 
-padding-left: 5px;
+    background:#2C2B2B;
+    float: left;
+    opacity=0.7;
+    padding:1px;
 }
 
+.clearRow{
+    clear:both;
+    float:left;
+}
+
+
 #box21{
-clear:both;
-float:left;
+    clear:both;
+    float:left;
 }
 
 #box31{
-clear:both;
-float:left;
+    clear:both;
+    float:left;
 }
 
-
 #box41{
-clear:both;
-float:left;
+    clear:both;
+    float:left;
 }
 
 
 .textButton {
+    float:left;
     background: white;
-    width: 21px;  height: 21px;
+    width: 27px;  height: 27px;
     text-align: center;
-    font: 18px bold;
-    box-shadow: 1px 1px 15px gray;
-   
-
+    font-size: 18px;
+    box-shadow: 1px 0px 2px gray;
 }
 
 
 .textButton:hover, .textButton:focus
 {
-opacity:0.9;
-background:  #CCE5FF;
+    opacity:0.9;
+    background:  #CCE5FF;
 }
-
-
-
-#buttons{
-    margin: 5px 20px 30px 125px; 
-    padding: 5px;
-    clear:both;
-    float:left;
-    padding: 5px;
-}  
-
-
-.dropbtn {
-    background:#1c1c1c;
-    color: #CCE5FF;
-    padding: 16px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  
-    font-size: 19px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
- background:#1c1c1c;
-    display: none;
-    position: absolute;
-    min-width: 75px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: white;
-    font-size: 12px;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-.dropdown a:hover {background-color:  #CCE5FF;}
-
-.show {display:block;}
-
-
-
-
-
 
 .main_panel
 {
-clear: both;
-padding: 5px;
+    clear: both;
+    padding-top: 20px;
 }
 
 
 .number_button
 {
 
-width:22px;
-height:22px;
-margin:2px;
-float:left;
-background-color: #CCE5FF;
-border-radius: 2px;
-font-size:18px;
-text-align:center;
-opacity: 0.7;
+    width:25px;
+    height:25px;
+    margin:2px;
+    float:left;
+    background-color: #CCE5FF;
+    border-radius: 2px;
+    font-size:22px;
+    text-align:center;
+    opacity: 0.7;
 }
 .number_button:hover
 {
-opacity: 0.9;
+    opacity: 0.9;
 }
 
-
-.text_box
-{
-width:250px; 
-height:25px;
-font-size:18px;
-text-align:right;
-}
+#buttons{
+    margin: 5px 60px;
+    padding: 10px;
+    clear:both;
+    float:left;
+    
+}  
 
 .indexPlayButton{
-    width: 210px;  height: 35px;
-     box-shadow: 1px 1px 15px #E0E0E0; 
+    width: 150px;  height: 35px;
+    box-shadow: 1px 1px 2px #CCE5FF;
     font: 16px Tahoma; 
-    border: 2px solid  #CCE5FF;
+    border: 3px solid  #CCE5FF;
     border-radius: 15px;
     background-color: white;
     opacity:0.8;
- 
+    
 }
 
 
@@ -227,3 +108,4 @@ text-align:right;
     opacity: 0.9;
     cursor: pointer;
 }
+
