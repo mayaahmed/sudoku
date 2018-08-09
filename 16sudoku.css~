@@ -128,6 +128,26 @@ background:  #CCE5FF;
     padding: 5px;
 }  
 
+.indexPlayButton{
+    width: 200px;  height: 40px;
+     box-shadow: 1px 1px 15px gray;
+    font: 16px Tahoma; 
+    border: 2px solid gray;
+  border-radius: 10px;
+    background: linear-gradient(#CCE5FF, black);
+
+    opacity:0.8;
+ 
+}
+
+
+
+.indexPlayButton:hover{
+    font-size: 19px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 
 .dropbtn {
     background:#1c1c1c;
@@ -209,21 +229,3 @@ font-size:18px;
 text-align:right;
 }
 
-.indexPlayButton{
-    width: 210px;  height: 35px;
-     box-shadow: 1px 1px 15px #E0E0E0; 
-    font: 16px Tahoma; 
-    border: 2px solid  #CCE5FF;
-    border-radius: 15px;
-    background-color: white;
-    opacity:0.8;
- 
-}
-
-
-
-.indexPlayButton:hover{
-    font-size: 17px;
-    opacity: 0.9;
-    cursor: pointer;
-}

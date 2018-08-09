@@ -18,8 +18,7 @@ body{
 	width: 100%;
 	display: -webkit-box;
 	-webkit-box-pack: center;
-  background: linear-gradient(black, gray);
-//  background: #1c1c1c;
+    background: #1c1c1c;
 }
 #big_wrapper{
 	max-width: 1000px;
@@ -69,15 +68,17 @@ float:right;
 
 #inputDiv
 {
-  width:500px; height: 500px;
+  width:500px; height: 500;
   margin: 20px auto auto 15px;
    opacity=0.7
+
 }
 
 div.cell{
-// background:#2C2B2B;
-width: 105px;
-height:105px;
+
+background:#2C2B2B;
+width: 95px;
+height:95px;
 float: left;
 opacity=0.7;
 padding-top: 5px; 
@@ -95,17 +96,11 @@ float:left;
 }
 
 
-#box41{
-clear:both;
-float:left;
-}
-
-
 .textButton {
     background: white;
-    width: 21px;  height: 21px;
+    width: 27px;  height: 27px;
     text-align: center;
-    font: 18px bold;
+    font-size: 25px;
     box-shadow: 1px 1px 15px gray;
    
 
@@ -121,12 +116,34 @@ background:  #CCE5FF;
 
 
 #buttons{
-    margin: 5px 20px 30px 125px; 
+    margin: 5px 20px 30px 40px; 
     padding: 5px;
     clear:both;
     float:left;
     padding: 5px;
 }  
+
+.indexPlayButton{
+    width: 210px;  height: 35px;
+     box-shadow: 1px 1px 15px #E0E0E0; 
+    font: 16px Tahoma; 
+    border: 2px solid  #CCE5FF;
+    border-radius: 15px;
+    background-color: white;
+    opacity:0.8;
+ 
+}
+
+
+
+.indexPlayButton:hover{
+    font-size: 17px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
 
 
 .dropbtn {
@@ -166,13 +183,69 @@ background:  #CCE5FF;
 }
 
 
-.dropdown a:hover {background-color:  #CCE5FF;}
+.dropdown a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
 
 
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
 
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
 
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay p {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay p:hover, .overlay p:focus {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px;}
+  .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 
 
 .main_panel
@@ -185,13 +258,13 @@ padding: 5px;
 .number_button
 {
 
-width:22px;
-height:22px;
+width:25px;
+height:25px;
 margin:2px;
 float:left;
 background-color: #CCE5FF;
 border-radius: 2px;
-font-size:18px;
+font-size:22px;
 text-align:center;
 opacity: 0.7;
 }
@@ -204,26 +277,8 @@ opacity: 0.9;
 .text_box
 {
 width:250px; 
-height:25px;
-font-size:18px;
+height:30px;
+font-size:24px;
 text-align:right;
 }
 
-.indexPlayButton{
-    width: 210px;  height: 35px;
-     box-shadow: 1px 1px 15px #E0E0E0; 
-    font: 16px Tahoma; 
-    border: 2px solid  #CCE5FF;
-    border-radius: 15px;
-    background-color: white;
-    opacity:0.8;
- 
-}
-
-
-
-.indexPlayButton:hover{
-    font-size: 17px;
-    opacity: 0.9;
-    cursor: pointer;
-}

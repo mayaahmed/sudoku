@@ -18,8 +18,7 @@ body{
 	width: 100%;
 	display: -webkit-box;
 	-webkit-box-pack: center;
- background: linear-gradient(black, gray);
-  //  background: #1c1c1c;
+    background: #1c1c1c;
 }
 #big_wrapper{
 	max-width: 1000px;
@@ -36,6 +35,7 @@ body{
 }
 
 #top_header{
+padding-left:20px;
 	font: bold 25px Tahoma; 
     color: #CCE5FF;
 
@@ -184,7 +184,7 @@ background:  #CCE5FF;
 }
 
 
-.dropdown a:hover {background-color:#CCE5FF;}
+.dropdown a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
 
