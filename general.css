@@ -1,59 +1,124 @@
-.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
+*
+{
+    margin: 0px;
+	padding: 0px;
 }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+h1{
+	font: bold 20px Tahoma;
+}
+h2{
+	font: bold 14px Tahoma;
 }
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+header, section, footer, aside, nav, article, hgroup{
+	display: block;
+}
+body{
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+    background: #1c1c1c;
+}
+#big_wrapper{
+	max-width: 1000px;
+	margin: 20px 0px;
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;
 }
 
-.overlay p {
-    padding: 8px;
-    text-decoration: none;
+#topStuff{
+
+    opacity:0.7;
+	border-bottom: 2px solid  #CCE5FF;
+}
+
+#top_header{
+padding-left:20px;
+	font: bold 25px Tahoma; 
+    color: #CCE5FF;
+
+   //  opacity:0.9;
+	}
+
+#flag{
+font-size: 11px;
+}
+
+ul{
+float:right;
+}
+
+#top_menu li{
+    
+	display: inline-block;
+	list-style: none;
+	font: bold 25px Tahoma;
+    color:#CCE5FF; 
+}
+    
+
+
+
+
+.dropbtn {
+    background:#1c1c1c;
+    color: #CCE5FF;
+    padding: 16px;
     font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
-.overlay p:hover, .overlay p:focus {
-    color: #f1f1f1;
+.dropbtn:hover, .dropbtn:focus {
+  
+    font-size: 19px;
 }
 
-.closebtn {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+ background:#1c1c1c;
+    display: none;
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    min-width: 75px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px;}
-  .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+.dropdown-content a {
+    color: white;
+    font-size: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
+
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+#the_footer{
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    border-top: 2px solid skyblue;
+    color: #CCE5FF;
+    
+    opacity: 0.7;
+}
+
+
+#the_footer:hover{
+    font-size: 14px;
+    color: beige;
+}
+
+
+
+
