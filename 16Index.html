@@ -1,431 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--  Programmer : Maya Ahmed 
-      Files: index.html; soduku.css; soduku.js 
-      These files contains the codes for the Soduku game
-      Date: "July 19 2016" -->
+  <!--  Programmer : Maya Ahmed 
+	Files: index.html; soduku.css; soduku.js 
+	These files contains the codes for the Soduku game
+	Date: "July 19 2016" -->
 
 
 
-	<head>
-		<meta charset="utf-8" />
-		<title>Punjiri: Web and Mobile Technologies.</title>
-		<link rel="stylesheet" type="text/css" href="16sudoku.css">
-<link rel="stylesheet" type="text/css" href="general.css">
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Punjiri: Web and Mobile Technologies.</title>
+    <link rel="stylesheet" type="text/css" href="16sudoku.css">
+    <link rel="stylesheet" type="text/css" href="general.css">
+  </head>
 
-	<body>
-	
-		<div id="big_wrapper">
+  <body>
+    
+    <div id="big_wrapper">
 
-          <div id="topStuff">
+      <div id="topStuff">
 
-          <header id="top_header">
-				<p> Sudoku</p>
-                <p id="flag"> 16x16 game </p>  
-			</header>
+        <header id="top_header">
+	  <p> Sudoku</p>
+          <p id="flag"> 16x16 game </p>  
+	</header>
 
-			<nav id="top_menu">
-				<ul>
+	<nav id="top_menu">
+	  <ul>
 
 
+            
+
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">New Game</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="easyIndex.html">Easy Game</a>
+                  <a href="index.html">Standard Game </a>
+                  <a href="advancedIndex.html">Advanced Game</a>
+                  <a href="16Index.html">16x16 Game</a>
+                  <a href="25Index.html">25x25 Game</a>
                   
-
-                  <li>
-                  <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">New Game</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="easyIndex.html">Easy Game</a>
-                      <a href="index.html">Standard Game </a>
-                      <a href="advancedIndex.html">Advanced Game</a>
-                      <a href="16Index.html">16x16 Game</a>
-                      <a href="25Index.html">25x25 Game</a>
-                     
-                    </div>
-                  </div>
-                  </li>
+                </div>
+              </div>
+            </li>
 
 
-                  <li>
-                    <div id="myNav" class="overlay">
-                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
-                      <div class="overlay-content">
-                       <p> &copy; Punjiri Web and Mobile Technologies, 2016. </p>
-                       <p> Email: maya.ahmed@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <span style="font-size:30px; cursor:pointer" onclick="openNav()"> &equiv;</span>
-                  </li>
-                  
-
-                      
-                </ul>
-			</nav>
-
-
-
-
-            </div>
-     <section id="main_section">   
-
-          <form name="input">
-
-            <div id="inputDiv">
-              <div class="cell"  id="box11">
-                <input id="input1_1" type="button" class="textButton" onclick="getTextBox(1,1)"  />
-                <input id="input1_2" type="button" class="textButton" onclick="getTextBox(1,2)" />
-                <input id="input1_3" type="button" class="textButton" onclick="getTextBox(1,3)" />
-                <input id="input1_4" type="button" class="textButton" onclick="getTextBox(1,4)" />
-                <input id="input2_1" type="button" class="textButton" onclick="getTextBox(2,1)" />
-                <input id="input2_2" type="button" class="textButton" onclick="getTextBox(2,2)" />
-                <input id="input2_3" type="button" class="textButton" onclick="getTextBox(2,3)" />
-                <input id="input2_4" type="button" class="textButton" onclick="getTextBox(2,4)" />
-                <input id="input3_1" type="button" class="textButton" onclick="getTextBox(3,1)" />
-                <input id="input3_2" type="button" class="textButton" onclick="getTextBox(3,2)" />
-                <input id="input3_3" type="button" class="textButton" onclick="getTextBox(3,3)" />
-                <input id="input3_4" type="button" class="textButton" onclick="getTextBox(3,4)" />
-                <input id="input4_1" type="button" class="textButton" onclick="getTextBox(4,1)" />
-                <input id="input4_2" type="button" class="textButton" onclick="getTextBox(4,2)" />
-                <input id="input4_3" type="button" class="textButton" onclick="getTextBox(4,3)" />
-                <input id="input4_4" type="button" class="textButton" onclick="getTextBox(4,4)" />
+            <li>
+              <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+                <div class="overlay-content">
+                  <p> &copy; Punjiri Web and Mobile Technologies, 2016. </p>
+                  <p> Email: maya.ahmed@gmail.com</p>
+                </div>
               </div>
 
+              <span style="font-size:30px; cursor:pointer" onclick="openNav()"> &equiv;</span>
+            </li>
+            
 
-              <div class="cell" id="box12">
-                
-                <input id="input1_5" type="button" class="textButton" onclick="getTextBox(1,5)" />
-                <input id="input1_6" type="button" class="textButton" onclick="getTextBox(1,6)" />
-                <input id="input1_7" type="button" class="textButton" onclick="getTextBox(1,7)" />
-                <input id="input1_8" type="button" class="textButton" onclick="getTextBox(1,8)" />
-                <input id="input2_5" type="button" class="textButton" onclick="getTextBox(2,5)" />
-                <input id="input2_6" type="button" class="textButton" onclick="getTextBox(2,6)" />
-                <input id="input2_7" type="button" class="textButton" onclick="getTextBox(2,7)" />
-                <input id="input2_8" type="button" class="textButton" onclick="getTextBox(2,8)" />
-                  
-                <input id="input3_5" type="button" class="textButton" onclick="getTextBox(3,5)" />
-                <input id="input3_6" type="button" class="textButton" onclick="getTextBox(3,6)" />
-                <input id="input3_7" type="button" class="textButton" onclick="getTextBox(3,7)" />
-                <input id="input3_8" type="button" class="textButton" onclick="getTextBox(3,8)" />
-                <input id="input4_5" type="button" class="textButton" onclick="getTextBox(4,5)" />
-                <input id="input4_6" type="button" class="textButton" onclick="getTextBox(4,6)" />
-                <input id="input4_7" type="button" class="textButton" onclick="getTextBox(4,7)" />
-                <input id="input4_8" type="button" class="textButton" onclick="getTextBox(4,8)" />
-              
-              </div>
-
-              <div class="cell" id="box13">
-                
-                <input id="input1_9" type="button" class="textButton" onclick="getTextBox(1,9)" />
-                <input id="input1_10" type="button" class="textButton" onclick="getTextBox(1,10)" />
-                <input id="input1_11" type="button" class="textButton" onclick="getTextBox(1,11)" />
-                <input id="input1_12" type="button" class="textButton" onclick="getTextBox(1,12)" />
-                <input id="input2_9" type="button" class="textButton" onclick="getTextBox(2,9)" />
-                <input id="input2_10" type="button" class="textButton" onclick="getTextBox(2,10)" /> 
-                <input id="input2_11" type="button" class="textButton" onclick="getTextBox(2,11)" />
-                <input id="input2_12" type="button" class="textButton" onclick="getTextBox(2,12)" />
-                <input id="input3_9" type="button" class="textButton" onclick="getTextBox(3,9)" />
-                <input id="input3_10" type="button" class="textButton" onclick="getTextBox(3,10)" />
-                <input id="input3_11" type="button" class="textButton" onclick="getTextBox(3,11)" />
-                <input id="input3_12" type="button" class="textButton" onclick="getTextBox(3,12)" />
-                <input id="input4_9" type="button" class="textButton" onclick="getTextBox(4,9)" />
-                <input id="input4_10" type="button" class="textButton" onclick="getTextBox(4,10)" />
-                <input id="input4_11" type="button" class="textButton" onclick="getTextBox(4,11)" />
-                <input id="input4_12" type="button" class="textButton" onclick="getTextBox(4,12)" />
-
-              </div>
-
-              <div class="cell" id="box14">
-                
-                <input id="input1_13" type="button" class="textButton" onclick="getTextBox(1,13)" />
-                <input id="input1_14" type="button" class="textButton" onclick="getTextBox(1,14)" />
-                <input id="input1_15" type="button" class="textButton" onclick="getTextBox(1,15)" />
-                <input id="input1_16" type="button" class="textButton" onclick="getTextBox(1,16)" />
-                <input id="input2_13" type="button" class="textButton" onclick="getTextBox(2,13)" />
-                <input id="input2_14" type="button" class="textButton" onclick="getTextBox(2,14)" /> 
-                <input id="input2_15" type="button" class="textButton" onclick="getTextBox(2,15)" />
-                <input id="input2_16" type="button" class="textButton" onclick="getTextBox(2,16)" />
-                <input id="input3_13" type="button" class="textButton" onclick="getTextBox(3,13)" />
-                <input id="input3_14" type="button" class="textButton" onclick="getTextBox(3,14)" />
-                <input id="input3_15" type="button" class="textButton" onclick="getTextBox(3,15)" />
-                <input id="input3_16" type="button" class="textButton" onclick="getTextBox(3,16)" />
-                <input id="input4_13" type="button" class="textButton" onclick="getTextBox(4,13)" />
-                <input id="input4_14" type="button" class="textButton" onclick="getTextBox(4,14)" />
-                <input id="input4_15" type="button" class="textButton" onclick="getTextBox(4,15)" />
-                <input id="input4_16" type="button" class="textButton" onclick="getTextBox(4,16)" />
-
-              </div>
-
-
-              <div class="cell" id="box21">
-                
-               
-                <input id="input5_1" type="button" class="textButton" onclick="getTextBox(5,1)" />
-                <input id="input5_2" type="button" class="textButton" onclick="getTextBox(5,2)" />
-                <input id="input5_3" type="button" class="textButton" onclick="getTextBox(5,3)" />
-                <input id="input5_4" type="button" class="textButton" onclick="getTextBox(5,4)" />
-                <input id="input6_1" type="button" class="textButton" onclick="getTextBox(6,1)" />
-                <input id="input6_2" type="button" class="textButton" onclick="getTextBox(6,2)" />
-                <input id="input6_3" type="button" class="textButton" onclick="getTextBox(6,3)" />
-                <input id="input6_4" type="button" class="textButton" onclick="getTextBox(6,4)" />
-                <input id="input7_1" type="button" class="textButton" onclick="getTextBox(7,1)" />
-                <input id="input7_2" type="button" class="textButton" onclick="getTextBox(7,2)" />
-                <input id="input7_3" type="button" class="textButton" onclick="getTextBox(7,3)" />
-                <input id="input7_4" type="button" class="textButton" onclick="getTextBox(7,4)" />
-                <input id="input8_1" type="button" class="textButton" onclick="getTextBox(8,1)" />
-                <input id="input8_2" type="button" class="textButton" onclick="getTextBox(8,2)" />
-                <input id="input8_3" type="button" class="textButton" onclick="getTextBox(8,3)" />
-                <input id="input8_4" type="button" class="textButton" onclick="getTextBox(8,4)" />
-
-              </div>
-
-
-              <div class="cell" id="box22">
-                <input id="input5_5" type="button" class="textButton" onclick="getTextBox(5,5)" />
-                <input id="input5_6" type="button" class="textButton" onclick="getTextBox(5,6)" />
-                <input id="input5_7" type="button" class="textButton" onclick="getTextBox(5,7)" />
-                <input id="input5_8" type="button" class="textButton" onclick="getTextBox(5,8)" />
-                <input id="input6_5" type="button" class="textButton" onclick="getTextBox(6,5)" />
-                <input id="input6_6" type="button" class="textButton" onclick="getTextBox(6,6)" />
-                <input id="input6_7" type="button" class="textButton" onclick="getTextBox(6,7)" />
-                <input id="input6_8" type="button" class="textButton" onclick="getTextBox(6,8)" />
-                <input id="input7_5" type="button" class="textButton" onclick="getTextBox(7,5)" />
-                <input id="input7_6" type="button" class="textButton" onclick="getTextBox(7,6)" />
-                <input id="input7_7" type="button" class="textButton" onclick="getTextBox(7,7)" />
-                <input id="input7_8" type="button" class="textButton" onclick="getTextBox(7,8)" />
-                <input id="input8_5" type="button" class="textButton" onclick="getTextBox(8,5)" />
-                <input id="input8_6" type="button" class="textButton" onclick="getTextBox(8,6)" />
-                <input id="input8_7" type="button" class="textButton" onclick="getTextBox(8,7)" />
-                <input id="input8_8" type="button" class="textButton" onclick="getTextBox(8,8)" />
-  </div>
-
-              <div class="cell" id="box23">
-                <input id="input5_9" type="button" class="textButton" onclick="getTextBox(5,9)" />
-                <input id="input5_10" type="button" class="textButton" onclick="getTextBox(5,10)" />
-                <input id="input5_11" type="button" class="textButton" onclick="getTextBox(5,11)" />
-                <input id="input5_12" type="button" class="textButton" onclick="getTextBox(5,12)" />
-                <input id="input6_9" type="button" class="textButton" onclick="getTextBox(6,9)" />
-                <input id="input6_10" type="button" class="textButton" onclick="getTextBox(6,10)" />
-                <input id="input6_11" type="button" class="textButton" onclick="getTextBox(6,11)" />
-                <input id="input6_12" type="button" class="textButton" onclick="getTextBox(6,12)" />
-                <input id="input7_9" type="button" class="textButton" onclick="getTextBox(7,9)" />
-                <input id="input7_10" type="button" class="textButton" onclick="getTextBox(7,10)" />
-                <input id="input7_11" type="button" class="textButton" onclick="getTextBox(7,11)" />
-                <input id="input7_12" type="button" class="textButton" onclick="getTextBox(7,12)" />
-                <input id="input8_9" type="button" class="textButton" onclick="getTextBox(8,9)" />
-                <input id="input8_10" type="button" class="textButton" onclick="getTextBox(8,10)" />
-                <input id="input8_11" type="button" class="textButton" onclick="getTextBox(8,11)" />
-                <input id="input8_12" type="button" class="textButton" onclick="getTextBox(8,12)" />
-
- </div>
-
-<div class="cell" id="box24">
-                <input id="input5_13" type="button" class="textButton" onclick="getTextBox(5,13)" />
-                <input id="input5_14" type="button" class="textButton" onclick="getTextBox(5,14)" />
-                <input id="input5_15" type="button" class="textButton" onclick="getTextBox(5,15)" />
-                <input id="input5_16" type="button" class="textButton" onclick="getTextBox(5,16)" />
-                <input id="input6_13" type="button" class="textButton" onclick="getTextBox(6,13)" />
-                <input id="input6_14" type="button" class="textButton" onclick="getTextBox(6,14)" />
-                <input id="input6_15" type="button" class="textButton" onclick="getTextBox(6,15)" />
-                <input id="input6_16" type="button" class="textButton" onclick="getTextBox(6,16)" />
-                <input id="input7_13" type="button" class="textButton" onclick="getTextBox(7,13)" />
-                <input id="input7_14" type="button" class="textButton" onclick="getTextBox(7,14)" />
-                <input id="input7_15" type="button" class="textButton" onclick="getTextBox(7,15)" />
-                <input id="input7_16" type="button" class="textButton" onclick="getTextBox(7,16)" />
-                <input id="input8_13" type="button" class="textButton" onclick="getTextBox(8,13)" />
-                <input id="input8_14" type="button" class="textButton" onclick="getTextBox(8,14)" />
-                <input id="input8_15" type="button" class="textButton" onclick="getTextBox(8,15)" />
-                <input id="input8_16" type="button" class="textButton" onclick="getTextBox(8,16)" />
-
- </div>
+            
+          </ul>
+	</nav>
 
 
 
-              <div class="cell" id="box31">
-                <input id="input9_1" type="button" class="textButton" onclick="getTextBox(9,1)" />
-                <input id="input9_2" type="button" class="textButton" onclick="getTextBox(9,2)" />
-                <input id="input9_3" type="button" class="textButton" onclick="getTextBox(9,3)" />
-                 <input id="input9_4" type="button" class="textButton" onclick="getTextBox(9,4)" />
-                 <input id="input10_1" type="button" class="textButton" onclick="getTextBox(10,1)" />
-                <input id="input10_2" type="button" class="textButton" onclick="getTextBox(10,2)" />
-                <input id="input10_3" type="button" class="textButton" onclick="getTextBox(10,3)" />
-                 <input id="input10_4" type="button" class="textButton" onclick="getTextBox(10,4)" />
-                 <input id="input11_1" type="button" class="textButton" onclick="getTextBox(11,1)" />
-                <input id="input11_2" type="button" class="textButton" onclick="getTextBox(11,2)" />
-                <input id="input11_3" type="button" class="textButton" onclick="getTextBox(11,3)" />
-                 <input id="input11_4" type="button" class="textButton" onclick="getTextBox(11,4)" />
-                 <input id="input12_1" type="button" class="textButton" onclick="getTextBox(12,1)" />
-                <input id="input12_2" type="button" class="textButton" onclick="getTextBox(12,2)" />
-                <input id="input12_3" type="button" class="textButton" onclick="getTextBox(12,3)" />
-                 <input id="input12_4" type="button" class="textButton" onclick="getTextBox(12,4)" />
-  
-            </div>
 
-              <div class="cell" id="box32">
-               <input id="input9_5" type="button" class="textButton" onclick="getTextBox(9,5)" />
-                <input id="input9_6" type="button" class="textButton" onclick="getTextBox(9,6)" />
-                <input id="input9_7" type="button" class="textButton" onclick="getTextBox(9,7)" />
-                <input id="input9_8" type="button" class="textButton" onclick="getTextBox(9,8)" />
-                <input id="input10_5" type="button" class="textButton" onclick="getTextBox(10,5)" />
-                <input id="input10_6" type="button" class="textButton" onclick="getTextBox(10,6)" />
-                <input id="input10_7" type="button" class="textButton" onclick="getTextBox(10,7)" />
-                <input id="input10_8" type="button" class="textButton" onclick="getTextBox(10,8)" />
-                <input id="input11_5" type="button" class="textButton" onclick="getTextBox(11,5)" />
-                <input id="input11_6" type="button" class="textButton" onclick="getTextBox(11,6)" />
-                <input id="input11_7" type="button" class="textButton" onclick="getTextBox(11,7)" />
-                <input id="input11_8" type="button" class="textButton" onclick="getTextBox(11,8)" />
-                <input id="input12_5" type="button" class="textButton" onclick="getTextBox(12,5)" />
-                <input id="input12_6" type="button" class="textButton" onclick="getTextBox(12,6)" />
-                <input id="input12_7" type="button" class="textButton" onclick="getTextBox(12,7)" />
-                <input id="input12_8" type="button" class="textButton" onclick="getTextBox(12,8)" />
-</div>
-
-              <div class="cell" id="box33">
-                <input id="input9_9" type="button" class="textButton" onclick="getTextBox(9,9)" /> 
-                <input id="input9_10" type="button" class="textButton" onclick="getTextBox(9,10)" /> 
-                <input id="input9_11" type="button" class="textButton" onclick="getTextBox(9,11)" /> 
-                <input id="input9_12" type="button" class="textButton" onclick="getTextBox(9,12)" /> 
-                <input id="input10_9" type="button" class="textButton" onclick="getTextBox(10,9)" /> 
-                <input id="input10_10" type="button" class="textButton" onclick="getTextBox(10,10)" /> 
-                <input id="input10_11" type="button" class="textButton" onclick="getTextBox(10,11)" /> 
-                <input id="input10_12" type="button" class="textButton" onclick="getTextBox(10,12)" /> 
-                <input id="input11_9" type="button" class="textButton" onclick="getTextBox(11,9)" /> 
-                <input id="input11_10" type="button" class="textButton" onclick="getTextBox(11,10)" /> 
-                <input id="input11_11" type="button" class="textButton" onclick="getTextBox(11,11)" /> 
-                <input id="input11_12" type="button" class="textButton" onclick="getTextBox(11,12)" /> 
-                <input id="input12_9" type="button" class="textButton" onclick="getTextBox(12,9)" /> 
-                <input id="input12_10" type="button" class="textButton" onclick="getTextBox(12,10)" /> 
-                <input id="input12_11" type="button" class="textButton" onclick="getTextBox(12,11)" /> 
-                <input id="input12_12" type="button" class="textButton" onclick="getTextBox(12,12)" /> 
-              </div>
-
-
-              <div class="cell" id="box34">
-                <input id="input9_13" type="button" class="textButton" onclick="getTextBox(9,13)" /> 
-                <input id="input9_14" type="button" class="textButton" onclick="getTextBox(9,14)" /> 
-                <input id="input9_15" type="button" class="textButton" onclick="getTextBox(9,15)" /> 
-                <input id="input9_16" type="button" class="textButton" onclick="getTextBox(9,16)" /> 
-                <input id="input10_13" type="button" class="textButton" onclick="getTextBox(10,13)" /> 
-                <input id="input10_14" type="button" class="textButton" onclick="getTextBox(10,14)" /> 
-                <input id="input10_15" type="button" class="textButton" onclick="getTextBox(10,15)" /> 
-                <input id="input10_16" type="button" class="textButton" onclick="getTextBox(10,16)" /> 
-              <input id="input11_13" type="button" class="textButton" onclick="getTextBox(11,13)" /> 
-                <input id="input11_14" type="button" class="textButton" onclick="getTextBox(11,14)" /> 
-                <input id="input11_15" type="button" class="textButton" onclick="getTextBox(11,15)" /> 
-                <input id="input11_16" type="button" class="textButton" onclick="getTextBox(11,16)" />  
-                <input id="input12_13" type="button" class="textButton" onclick="getTextBox(12,13)" /> 
-                <input id="input12_14" type="button" class="textButton" onclick="getTextBox(12,14)" /> 
-                <input id="input12_15" type="button" class="textButton" onclick="getTextBox(12,15)" /> 
-                <input id="input12_16" type="button" class="textButton" onclick="getTextBox(12,16)" />   
- </div>
-
-              <div class="cell" id="box41">
-               <input id="input13_1" type="button" class="textButton" onclick="getTextBox(13,1)" />
-                <input id="input13_2" type="button" class="textButton" onclick="getTextBox(13,2)" />
-                <input id="input13_3" type="button" class="textButton" onclick="getTextBox(13,3)" />
-                <input id="input13_4" type="button" class="textButton" onclick="getTextBox(13,4)" />
-                <input id="input14_1" type="button" class="textButton" onclick="getTextBox(14,1)" />
-                <input id="input14_2" type="button" class="textButton" onclick="getTextBox(14,2)" />
-                <input id="input14_3" type="button" class="textButton" onclick="getTextBox(14,3)" />
-                <input id="input14_4" type="button" class="textButton" onclick="getTextBox(14,4)" />
-                <input id="input15_1" type="button" class="textButton" onclick="getTextBox(15,1)" />
-                <input id="input15_2" type="button" class="textButton" onclick="getTextBox(15,2)" />
-                <input id="input15_3" type="button" class="textButton" onclick="getTextBox(15,3)" />
-                <input id="input15_4" type="button" class="textButton" onclick="getTextBox(15,4)" />
-                <input id="input16_1" type="button" class="textButton" onclick="getTextBox(16,1)" />
-                <input id="input16_2" type="button" class="textButton" onclick="getTextBox(16,2)" />
-                <input id="input16_3" type="button" class="textButton" onclick="getTextBox(16,3)" />
-                <input id="input16_4" type="button" class="textButton" onclick="getTextBox(16,4)" />
-              </div>
-              <div class="cell" id="box42">
-                <input id="input13_5" type="button" class="textButton" onclick="getTextBox(13,5)" />
-                <input id="input13_6" type="button" class="textButton" onclick="getTextBox(13,6)" />
-                <input id="input13_7" type="button" class="textButton" onclick="getTextBox(13,7)" />
-                <input id="input13_8" type="button" class="textButton" onclick="getTextBox(13,8)" />
-                <input id="input14_5" type="button" class="textButton" onclick="getTextBox(14,5)" />
-                <input id="input14_6" type="button" class="textButton" onclick="getTextBox(14,6)" />
-                <input id="input14_7" type="button" class="textButton" onclick="getTextBox(14,7)" />
-                <input id="input14_8" type="button" class="textButton" onclick="getTextBox(14,8)" />
-                <input id="input15_5" type="button" class="textButton" onclick="getTextBox(15,5)" />
-                <input id="input15_6" type="button" class="textButton" onclick="getTextBox(15,6)" />
-                <input id="input15_7" type="button" class="textButton" onclick="getTextBox(15,7)" />
-                <input id="input15_8" type="button" class="textButton" onclick="getTextBox(15,8)" />
-                <input id="input16_5" type="button" class="textButton" onclick="getTextBox(16,5)" />
-                <input id="input16_6" type="button" class="textButton" onclick="getTextBox(16,6)" />
-                <input id="input16_7" type="button" class="textButton" onclick="getTextBox(16,7)" />
-                <input id="input16_8" type="button" class="textButton" onclick="getTextBox(16,8)" />
-              </div>
-<div class="cell" id="box43">
-                <input id="input13_9" type="button" class="textButton" onclick="getTextBox(13,9)" /> 
-                <input id="input13_10" type="button" class="textButton" onclick="getTextBox(13,10)" /> 
-                <input id="input13_11" type="button" class="textButton" onclick="getTextBox(13,11)" /> 
-                <input id="input13_12" type="button" class="textButton" onclick="getTextBox(13,12)" /> 
-                <input id="input14_9" type="button" class="textButton" onclick="getTextBox(14,9)" /> 
-                <input id="input14_10" type="button" class="textButton" onclick="getTextBox(14,10)" /> 
-                <input id="input14_11" type="button" class="textButton" onclick="getTextBox(14,11)" /> 
-                <input id="input14_12" type="button" class="textButton" onclick="getTextBox(14,12)" /> 
-                <input id="input15_9" type="button" class="textButton" onclick="getTextBox(15,9)" /> 
-                <input id="input15_10" type="button" class="textButton" onclick="getTextBox(15,10)" /> 
-                <input id="input15_11" type="button" class="textButton" onclick="getTextBox(15,11)" /> 
-                <input id="input15_12" type="button" class="textButton" onclick="getTextBox(15,12)" /> 
-                <input id="input16_9" type="button" class="textButton" onclick="getTextBox(16,9)" /> 
-                <input id="input16_10" type="button" class="textButton" onclick="getTextBox(16,10)" /> 
-                <input id="input16_11" type="button" class="textButton" onclick="getTextBox(16,11)" /> 
-                <input id="input16_12" type="button" class="textButton" onclick="getTextBox(16,12)" /> 
-                 </div>
-<div class="cell" id="box44">
-                <input id="input13_13" type="button" class="textButton" onclick="getTextBox(13,13)" /> 
-                <input id="input13_14" type="button" class="textButton" onclick="getTextBox(13,14)" /> 
-                <input id="input13_15" type="button" class="textButton" onclick="getTextBox(13,15)" /> 
-                <input id="input13_16" type="button" class="textButton" onclick="getTextBox(13,16)" /> 
-                <input id="input14_13" type="button" class="textButton" onclick="getTextBox(14,13)" /> 
-                <input id="input14_14" type="button" class="textButton" onclick="getTextBox(14,14)" /> 
-                <input id="input14_15" type="button" class="textButton" onclick="getTextBox(14,15)" /> 
-                <input id="input14_16" type="button" class="textButton" onclick="getTextBox(14,16)" /> 
-                <input id="input15_13" type="button" class="textButton" onclick="getTextBox(15,13)" /> 
-                <input id="input15_14" type="button" class="textButton" onclick="getTextBox(15,14)" /> 
-                <input id="input15_15" type="button" class="textButton" onclick="getTextBox(15,15)" /> 
-                <input id="input15_16" type="button" class="textButton" onclick="getTextBox(15,16)" /> 
-                <input id="input16_13" type="button" class="textButton" onclick="getTextBox(16,13)" /> 
-                <input id="input16_14" type="button" class="textButton" onclick="getTextBox(16,14)" /> 
-                <input id="input16_15" type="button" class="textButton" onclick="getTextBox(16,15)" /> 
-                <input id="input16_16" type="button" class="textButton" onclick="getTextBox(16,16)" /> 
-                 </div>
-
-
-<div class="main_panel">
-
-
-<div class="number_button" onclick="number_write(1);">1</div>
-<div class="number_button" onclick="number_write(2);">2</div>
-<div class="number_button" onclick="number_write(3);">3</div>
-<div class="number_button" onclick="number_write(4);">4</div>
-<div class="number_button" onclick="number_write(5);">5</div>
-<div class="number_button" onclick="number_write(6);">6</div>
-<div class="number_button" onclick="number_write(7);">7</div>
-<div class="number_button" onclick="number_write(8);">8</div>
-<div class="number_button" onclick="number_write(9);">9</div>
-<div class="number_button" onclick="number_write(10);">10</div>
-<div class="number_button" onclick="number_write(11);">11</div>
-<div class="number_button" onclick="number_write(12);">12</div>
-<div class="number_button" onclick="number_write(13);">13</div>
-<div class="number_button" onclick="number_write(14);">14</div>
-<div class="number_button" onclick="number_write(15);">15</div>
-<div class="number_button" onclick="number_write(16);">16</div>
-<div class="number_button" onclick="number_c();">&#8592;</div>
-</div>
-
-
-<div id="buttons">
- <input type="button" class="indexPlayButton" value="Submit Solution!"    onClick="run();" \>
       </div>
-                     
- </section>
-     </div>
-<script src="numCells16.js"></script> 
+      <section id="main_section">   
 
-        <script src="16sudoku.js"></script> 
-<script src="general.js"></script> 
-	</body>
+     
+
+          <div id="inputDiv">
+            <div class="cell"  id="box11">
+              <input id="input1_1" type="button" class="textButton" onclick="getTextBox(1,1)"  />
+              <input id="input1_2" type="button" class="textButton" onclick="getTextBox(1,2)" />
+              <input id="input1_3" type="button" class="textButton" onclick="getTextBox(1,3)" />
+              <input id="input1_4" type="button" class="textButton" onclick="getTextBox(1,4)" />
+              <input id="input2_1" type="button" class="textButton" onclick="getTextBox(2,1)" />
+              <input id="input2_2" type="button" class="textButton" onclick="getTextBox(2,2)" />
+              <input id="input2_3" type="button" class="textButton" onclick="getTextBox(2,3)" />
+              <input id="input2_4" type="button" class="textButton" onclick="getTextBox(2,4)" />
+              <input id="input3_1" type="button" class="textButton" onclick="getTextBox(3,1)" />
+              <input id="input3_2" type="button" class="textButton" onclick="getTextBox(3,2)" />
+              <input id="input3_3" type="button" class="textButton" onclick="getTextBox(3,3)" />
+              <input id="input3_4" type="button" class="textButton" onclick="getTextBox(3,4)" />
+              <input id="input4_1" type="button" class="textButton" onclick="getTextBox(4,1)" />
+              <input id="input4_2" type="button" class="textButton" onclick="getTextBox(4,2)" />
+              <input id="input4_3" type="button" class="textButton" onclick="getTextBox(4,3)" />
+              <input id="input4_4" type="button" class="textButton" onclick="getTextBox(4,4)" />
+            </div>
+
+
+            <div class="cell" id="box12">
+              
+              <input id="input1_5" type="button" class="textButton" onclick="getTextBox(1,5)" />
+              <input id="input1_6" type="button" class="textButton" onclick="getTextBox(1,6)" />
+              <input id="input1_7" type="button" class="textButton" onclick="getTextBox(1,7)" />
+              <input id="input1_8" type="button" class="textButton" onclick="getTextBox(1,8)" />
+              <input id="input2_5" type="button" class="textButton" onclick="getTextBox(2,5)" />
+              <input id="input2_6" type="button" class="textButton" onclick="getTextBox(2,6)" />
+              <input id="input2_7" type="button" class="textButton" onclick="getTextBox(2,7)" />
+              <input id="input2_8" type="button" class="textButton" onclick="getTextBox(2,8)" />
+              
+              <input id="input3_5" type="button" class="textButton" onclick="getTextBox(3,5)" />
+              <input id="input3_6" type="button" class="textButton" onclick="getTextBox(3,6)" />
+              <input id="input3_7" type="button" class="textButton" onclick="getTextBox(3,7)" />
+              <input id="input3_8" type="button" class="textButton" onclick="getTextBox(3,8)" />
+              <input id="input4_5" type="button" class="textButton" onclick="getTextBox(4,5)" />
+              <input id="input4_6" type="button" class="textButton" onclick="getTextBox(4,6)" />
+              <input id="input4_7" type="button" class="textButton" onclick="getTextBox(4,7)" />
+              <input id="input4_8" type="button" class="textButton" onclick="getTextBox(4,8)" />
+              
+            </div>
+
+            <div class="cell" id="box13">
+              
+              <input id="input1_9" type="button" class="textButton" onclick="getTextBox(1,9)" />
+              <input id="input1_10" type="button" class="textButton" onclick="getTextBox(1,10)" />
+              <input id="input1_11" type="button" class="textButton" onclick="getTextBox(1,11)" />
+              <input id="input1_12" type="button" class="textButton" onclick="getTextBox(1,12)" />
+              <input id="input2_9" type="button" class="textButton" onclick="getTextBox(2,9)" />
+              <input id="input2_10" type="button" class="textButton" onclick="getTextBox(2,10)" /> 
+              <input id="input2_11" type="button" class="textButton" onclick="getTextBox(2,11)" />
+              <input id="input2_12" type="button" class="textButton" onclick="getTextBox(2,12)" />
+              <input id="input3_9" type="button" class="textButton" onclick="getTextBox(3,9)" />
+              <input id="input3_10" type="button" class="textButton" onclick="getTextBox(3,10)" />
+              <input id="input3_11" type="button" class="textButton" onclick="getTextBox(3,11)" />
+              <input id="input3_12" type="button" class="textButton" onclick="getTextBox(3,12)" />
+              <input id="input4_9" type="button" class="textButton" onclick="getTextBox(4,9)" />
+              <input id="input4_10" type="button" class="textButton" onclick="getTextBox(4,10)" />
+              <input id="input4_11" type="button" class="textButton" onclick="getTextBox(4,11)" />
+              <input id="input4_12" type="button" class="textButton" onclick="getTextBox(4,12)" />
+
+            </div>
+
+            <div class="cell" id="box14">
+              
+              <input id="input1_13" type="button" class="textButton" onclick="getTextBox(1,13)" />
+              <input id="input1_14" type="button" class="textButton" onclick="getTextBox(1,14)" />
+              <input id="input1_15" type="button" class="textButton" onclick="getTextBox(1,15)" />
+              <input id="input1_16" type="button" class="textButton" onclick="getTextBox(1,16)" />
+              <input id="input2_13" type="button" class="textButton" onclick="getTextBox(2,13)" />
+              <input id="input2_14" type="button" class="textButton" onclick="getTextBox(2,14)" /> 
+              <input id="input2_15" type="button" class="textButton" onclick="getTextBox(2,15)" />
+              <input id="input2_16" type="button" class="textButton" onclick="getTextBox(2,16)" />
+              <input id="input3_13" type="button" class="textButton" onclick="getTextBox(3,13)" />
+              <input id="input3_14" type="button" class="textButton" onclick="getTextBox(3,14)" />
+              <input id="input3_15" type="button" class="textButton" onclick="getTextBox(3,15)" />
+              <input id="input3_16" type="button" class="textButton" onclick="getTextBox(3,16)" />
+              <input id="input4_13" type="button" class="textButton" onclick="getTextBox(4,13)" />
+              <input id="input4_14" type="button" class="textButton" onclick="getTextBox(4,14)" />
+              <input id="input4_15" type="button" class="textButton" onclick="getTextBox(4,15)" />
+              <input id="input4_16" type="button" class="textButton" onclick="getTextBox(4,16)" />
+
+            </div>
+
+
+            <div class="cell" id="box21">
+              
+              
+              <input id="input5_1" type="button" class="textButton" onclick="getTextBox(5,1)" />
+              <input id="input5_2" type="button" class="textButton" onclick="getTextBox(5,2)" />
+              <input id="input5_3" type="button" class="textButton" onclick="getTextBox(5,3)" />
+              <input id="input5_4" type="button" class="textButton" onclick="getTextBox(5,4)" />
+              <input id="input6_1" type="button" class="textButton" onclick="getTextBox(6,1)" />
+              <input id="input6_2" type="button" class="textButton" onclick="getTextBox(6,2)" />
+              <input id="input6_3" type="button" class="textButton" onclick="getTextBox(6,3)" />
+              <input id="input6_4" type="button" class="textButton" onclick="getTextBox(6,4)" />
+              <input id="input7_1" type="button" class="textButton" onclick="getTextBox(7,1)" />
+              <input id="input7_2" type="button" class="textButton" onclick="getTextBox(7,2)" />
+              <input id="input7_3" type="button" class="textButton" onclick="getTextBox(7,3)" />
+              <input id="input7_4" type="button" class="textButton" onclick="getTextBox(7,4)" />
+              <input id="input8_1" type="button" class="textButton" onclick="getTextBox(8,1)" />
+              <input id="input8_2" type="button" class="textButton" onclick="getTextBox(8,2)" />
+              <input id="input8_3" type="button" class="textButton" onclick="getTextBox(8,3)" />
+              <input id="input8_4" type="button" class="textButton" onclick="getTextBox(8,4)" />
+
+            </div>
+
+
+            <div class="cell" id="box22">
+              <input id="input5_5" type="button" class="textButton" onclick="getTextBox(5,5)" />
+              <input id="input5_6" type="button" class="textButton" onclick="getTextBox(5,6)" />
+              <input id="input5_7" type="button" class="textButton" onclick="getTextBox(5,7)" />
+              <input id="input5_8" type="button" class="textButton" onclick="getTextBox(5,8)" />
+              <input id="input6_5" type="button" class="textButton" onclick="getTextBox(6,5)" />
+              <input id="input6_6" type="button" class="textButton" onclick="getTextBox(6,6)" />
+              <input id="input6_7" type="button" class="textButton" onclick="getTextBox(6,7)" />
+              <input id="input6_8" type="button" class="textButton" onclick="getTextBox(6,8)" />
+              <input id="input7_5" type="button" class="textButton" onclick="getTextBox(7,5)" />
+              <input id="input7_6" type="button" class="textButton" onclick="getTextBox(7,6)" />
+              <input id="input7_7" type="button" class="textButton" onclick="getTextBox(7,7)" />
+              <input id="input7_8" type="button" class="textButton" onclick="getTextBox(7,8)" />
+              <input id="input8_5" type="button" class="textButton" onclick="getTextBox(8,5)" />
+              <input id="input8_6" type="button" class="textButton" onclick="getTextBox(8,6)" />
+              <input id="input8_7" type="button" class="textButton" onclick="getTextBox(8,7)" />
+              <input id="input8_8" type="button" class="textButton" onclick="getTextBox(8,8)" />
+	    </div>
+
+            <div class="cell" id="box23">
+              <input id="input5_9" type="button" class="textButton" onclick="getTextBox(5,9)" />
+              <input id="input5_10" type="button" class="textButton" onclick="getTextBox(5,10)" />
+              <input id="input5_11" type="button" class="textButton" onclick="getTextBox(5,11)" />
+              <input id="input5_12" type="button" class="textButton" onclick="getTextBox(5,12)" />
+              <input id="input6_9" type="button" class="textButton" onclick="getTextBox(6,9)" />
+              <input id="input6_10" type="button" class="textButton" onclick="getTextBox(6,10)" />
+              <input id="input6_11" type="button" class="textButton" onclick="getTextBox(6,11)" />
+              <input id="input6_12" type="button" class="textButton" onclick="getTextBox(6,12)" />
+              <input id="input7_9" type="button" class="textButton" onclick="getTextBox(7,9)" />
+              <input id="input7_10" type="button" class="textButton" onclick="getTextBox(7,10)" />
+              <input id="input7_11" type="button" class="textButton" onclick="getTextBox(7,11)" />
+              <input id="input7_12" type="button" class="textButton" onclick="getTextBox(7,12)" />
+              <input id="input8_9" type="button" class="textButton" onclick="getTextBox(8,9)" />
+              <input id="input8_10" type="button" class="textButton" onclick="getTextBox(8,10)" />
+              <input id="input8_11" type="button" class="textButton" onclick="getTextBox(8,11)" />
+              <input id="input8_12" type="button" class="textButton" onclick="getTextBox(8,12)" />
+
+	    </div>
+
+	    <div class="cell" id="box24">
+              <input id="input5_13" type="button" class="textButton" onclick="getTextBox(5,13)" />
+              <input id="input5_14" type="button" class="textButton" onclick="getTextBox(5,14)" />
+              <input id="input5_15" type="button" class="textButton" onclick="getTextBox(5,15)" />
+              <input id="input5_16" type="button" class="textButton" onclick="getTextBox(5,16)" />
+              <input id="input6_13" type="button" class="textButton" onclick="getTextBox(6,13)" />
+              <input id="input6_14" type="button" class="textButton" onclick="getTextBox(6,14)" />
+              <input id="input6_15" type="button" class="textButton" onclick="getTextBox(6,15)" />
+              <input id="input6_16" type="button" class="textButton" onclick="getTextBox(6,16)" />
+              <input id="input7_13" type="button" class="textButton" onclick="getTextBox(7,13)" />
+              <input id="input7_14" type="button" class="textButton" onclick="getTextBox(7,14)" />
+              <input id="input7_15" type="button" class="textButton" onclick="getTextBox(7,15)" />
+              <input id="input7_16" type="button" class="textButton" onclick="getTextBox(7,16)" />
+              <input id="input8_13" type="button" class="textButton" onclick="getTextBox(8,13)" />
+              <input id="input8_14" type="button" class="textButton" onclick="getTextBox(8,14)" />
+              <input id="input8_15" type="button" class="textButton" onclick="getTextBox(8,15)" />
+              <input id="input8_16" type="button" class="textButton" onclick="getTextBox(8,16)" />
+
+	    </div>
+
+
+
+            <div class="cell" id="box31">
+              <input id="input9_1" type="button" class="textButton" onclick="getTextBox(9,1)" />
+              <input id="input9_2" type="button" class="textButton" onclick="getTextBox(9,2)" />
+              <input id="input9_3" type="button" class="textButton" onclick="getTextBox(9,3)" />
+              <input id="input9_4" type="button" class="textButton" onclick="getTextBox(9,4)" />
+              <input id="input10_1" type="button" class="textButton" onclick="getTextBox(10,1)" />
+              <input id="input10_2" type="button" class="textButton" onclick="getTextBox(10,2)" />
+              <input id="input10_3" type="button" class="textButton" onclick="getTextBox(10,3)" />
+              <input id="input10_4" type="button" class="textButton" onclick="getTextBox(10,4)" />
+              <input id="input11_1" type="button" class="textButton" onclick="getTextBox(11,1)" />
+              <input id="input11_2" type="button" class="textButton" onclick="getTextBox(11,2)" />
+              <input id="input11_3" type="button" class="textButton" onclick="getTextBox(11,3)" />
+              <input id="input11_4" type="button" class="textButton" onclick="getTextBox(11,4)" />
+              <input id="input12_1" type="button" class="textButton" onclick="getTextBox(12,1)" />
+              <input id="input12_2" type="button" class="textButton" onclick="getTextBox(12,2)" />
+              <input id="input12_3" type="button" class="textButton" onclick="getTextBox(12,3)" />
+              <input id="input12_4" type="button" class="textButton" onclick="getTextBox(12,4)" />
+	      
+            </div>
+
+            <div class="cell" id="box32">
+              <input id="input9_5" type="button" class="textButton" onclick="getTextBox(9,5)" />
+              <input id="input9_6" type="button" class="textButton" onclick="getTextBox(9,6)" />
+              <input id="input9_7" type="button" class="textButton" onclick="getTextBox(9,7)" />
+              <input id="input9_8" type="button" class="textButton" onclick="getTextBox(9,8)" />
+              <input id="input10_5" type="button" class="textButton" onclick="getTextBox(10,5)" />
+              <input id="input10_6" type="button" class="textButton" onclick="getTextBox(10,6)" />
+              <input id="input10_7" type="button" class="textButton" onclick="getTextBox(10,7)" />
+              <input id="input10_8" type="button" class="textButton" onclick="getTextBox(10,8)" />
+              <input id="input11_5" type="button" class="textButton" onclick="getTextBox(11,5)" />
+              <input id="input11_6" type="button" class="textButton" onclick="getTextBox(11,6)" />
+              <input id="input11_7" type="button" class="textButton" onclick="getTextBox(11,7)" />
+              <input id="input11_8" type="button" class="textButton" onclick="getTextBox(11,8)" />
+              <input id="input12_5" type="button" class="textButton" onclick="getTextBox(12,5)" />
+              <input id="input12_6" type="button" class="textButton" onclick="getTextBox(12,6)" />
+              <input id="input12_7" type="button" class="textButton" onclick="getTextBox(12,7)" />
+              <input id="input12_8" type="button" class="textButton" onclick="getTextBox(12,8)" />
+	    </div>
+
+            <div class="cell" id="box33">
+              <input id="input9_9" type="button" class="textButton" onclick="getTextBox(9,9)" /> 
+              <input id="input9_10" type="button" class="textButton" onclick="getTextBox(9,10)" /> 
+              <input id="input9_11" type="button" class="textButton" onclick="getTextBox(9,11)" /> 
+              <input id="input9_12" type="button" class="textButton" onclick="getTextBox(9,12)" /> 
+              <input id="input10_9" type="button" class="textButton" onclick="getTextBox(10,9)" /> 
+              <input id="input10_10" type="button" class="textButton" onclick="getTextBox(10,10)" /> 
+              <input id="input10_11" type="button" class="textButton" onclick="getTextBox(10,11)" /> 
+              <input id="input10_12" type="button" class="textButton" onclick="getTextBox(10,12)" /> 
+              <input id="input11_9" type="button" class="textButton" onclick="getTextBox(11,9)" /> 
+              <input id="input11_10" type="button" class="textButton" onclick="getTextBox(11,10)" /> 
+              <input id="input11_11" type="button" class="textButton" onclick="getTextBox(11,11)" /> 
+              <input id="input11_12" type="button" class="textButton" onclick="getTextBox(11,12)" /> 
+              <input id="input12_9" type="button" class="textButton" onclick="getTextBox(12,9)" /> 
+              <input id="input12_10" type="button" class="textButton" onclick="getTextBox(12,10)" /> 
+              <input id="input12_11" type="button" class="textButton" onclick="getTextBox(12,11)" /> 
+              <input id="input12_12" type="button" class="textButton" onclick="getTextBox(12,12)" /> 
+            </div>
+
+
+            <div class="cell" id="box34">
+              <input id="input9_13" type="button" class="textButton" onclick="getTextBox(9,13)" /> 
+              <input id="input9_14" type="button" class="textButton" onclick="getTextBox(9,14)" /> 
+              <input id="input9_15" type="button" class="textButton" onclick="getTextBox(9,15)" /> 
+              <input id="input9_16" type="button" class="textButton" onclick="getTextBox(9,16)" /> 
+              <input id="input10_13" type="button" class="textButton" onclick="getTextBox(10,13)" /> 
+              <input id="input10_14" type="button" class="textButton" onclick="getTextBox(10,14)" /> 
+              <input id="input10_15" type="button" class="textButton" onclick="getTextBox(10,15)" /> 
+              <input id="input10_16" type="button" class="textButton" onclick="getTextBox(10,16)" /> 
+              <input id="input11_13" type="button" class="textButton" onclick="getTextBox(11,13)" /> 
+              <input id="input11_14" type="button" class="textButton" onclick="getTextBox(11,14)" /> 
+              <input id="input11_15" type="button" class="textButton" onclick="getTextBox(11,15)" /> 
+              <input id="input11_16" type="button" class="textButton" onclick="getTextBox(11,16)" />  
+              <input id="input12_13" type="button" class="textButton" onclick="getTextBox(12,13)" /> 
+              <input id="input12_14" type="button" class="textButton" onclick="getTextBox(12,14)" /> 
+              <input id="input12_15" type="button" class="textButton" onclick="getTextBox(12,15)" /> 
+              <input id="input12_16" type="button" class="textButton" onclick="getTextBox(12,16)" />   
+	    </div>
+
+            <div class="cell" id="box41">
+              <input id="input13_1" type="button" class="textButton" onclick="getTextBox(13,1)" />
+              <input id="input13_2" type="button" class="textButton" onclick="getTextBox(13,2)" />
+              <input id="input13_3" type="button" class="textButton" onclick="getTextBox(13,3)" />
+              <input id="input13_4" type="button" class="textButton" onclick="getTextBox(13,4)" />
+              <input id="input14_1" type="button" class="textButton" onclick="getTextBox(14,1)" />
+              <input id="input14_2" type="button" class="textButton" onclick="getTextBox(14,2)" />
+              <input id="input14_3" type="button" class="textButton" onclick="getTextBox(14,3)" />
+              <input id="input14_4" type="button" class="textButton" onclick="getTextBox(14,4)" />
+              <input id="input15_1" type="button" class="textButton" onclick="getTextBox(15,1)" />
+              <input id="input15_2" type="button" class="textButton" onclick="getTextBox(15,2)" />
+              <input id="input15_3" type="button" class="textButton" onclick="getTextBox(15,3)" />
+              <input id="input15_4" type="button" class="textButton" onclick="getTextBox(15,4)" />
+              <input id="input16_1" type="button" class="textButton" onclick="getTextBox(16,1)" />
+              <input id="input16_2" type="button" class="textButton" onclick="getTextBox(16,2)" />
+              <input id="input16_3" type="button" class="textButton" onclick="getTextBox(16,3)" />
+              <input id="input16_4" type="button" class="textButton" onclick="getTextBox(16,4)" />
+            </div>
+            <div class="cell" id="box42">
+              <input id="input13_5" type="button" class="textButton" onclick="getTextBox(13,5)" />
+              <input id="input13_6" type="button" class="textButton" onclick="getTextBox(13,6)" />
+              <input id="input13_7" type="button" class="textButton" onclick="getTextBox(13,7)" />
+              <input id="input13_8" type="button" class="textButton" onclick="getTextBox(13,8)" />
+              <input id="input14_5" type="button" class="textButton" onclick="getTextBox(14,5)" />
+              <input id="input14_6" type="button" class="textButton" onclick="getTextBox(14,6)" />
+              <input id="input14_7" type="button" class="textButton" onclick="getTextBox(14,7)" />
+              <input id="input14_8" type="button" class="textButton" onclick="getTextBox(14,8)" />
+              <input id="input15_5" type="button" class="textButton" onclick="getTextBox(15,5)" />
+              <input id="input15_6" type="button" class="textButton" onclick="getTextBox(15,6)" />
+              <input id="input15_7" type="button" class="textButton" onclick="getTextBox(15,7)" />
+              <input id="input15_8" type="button" class="textButton" onclick="getTextBox(15,8)" />
+              <input id="input16_5" type="button" class="textButton" onclick="getTextBox(16,5)" />
+              <input id="input16_6" type="button" class="textButton" onclick="getTextBox(16,6)" />
+              <input id="input16_7" type="button" class="textButton" onclick="getTextBox(16,7)" />
+              <input id="input16_8" type="button" class="textButton" onclick="getTextBox(16,8)" />
+            </div>
+	    <div class="cell" id="box43">
+              <input id="input13_9" type="button" class="textButton" onclick="getTextBox(13,9)" /> 
+              <input id="input13_10" type="button" class="textButton" onclick="getTextBox(13,10)" /> 
+              <input id="input13_11" type="button" class="textButton" onclick="getTextBox(13,11)" /> 
+              <input id="input13_12" type="button" class="textButton" onclick="getTextBox(13,12)" /> 
+              <input id="input14_9" type="button" class="textButton" onclick="getTextBox(14,9)" /> 
+              <input id="input14_10" type="button" class="textButton" onclick="getTextBox(14,10)" /> 
+              <input id="input14_11" type="button" class="textButton" onclick="getTextBox(14,11)" /> 
+              <input id="input14_12" type="button" class="textButton" onclick="getTextBox(14,12)" /> 
+              <input id="input15_9" type="button" class="textButton" onclick="getTextBox(15,9)" /> 
+              <input id="input15_10" type="button" class="textButton" onclick="getTextBox(15,10)" /> 
+              <input id="input15_11" type="button" class="textButton" onclick="getTextBox(15,11)" /> 
+              <input id="input15_12" type="button" class="textButton" onclick="getTextBox(15,12)" /> 
+              <input id="input16_9" type="button" class="textButton" onclick="getTextBox(16,9)" /> 
+              <input id="input16_10" type="button" class="textButton" onclick="getTextBox(16,10)" /> 
+              <input id="input16_11" type="button" class="textButton" onclick="getTextBox(16,11)" /> 
+              <input id="input16_12" type="button" class="textButton" onclick="getTextBox(16,12)" /> 
+            </div>
+	    <div class="cell" id="box44">
+              <input id="input13_13" type="button" class="textButton" onclick="getTextBox(13,13)" /> 
+              <input id="input13_14" type="button" class="textButton" onclick="getTextBox(13,14)" /> 
+              <input id="input13_15" type="button" class="textButton" onclick="getTextBox(13,15)" /> 
+              <input id="input13_16" type="button" class="textButton" onclick="getTextBox(13,16)" /> 
+              <input id="input14_13" type="button" class="textButton" onclick="getTextBox(14,13)" /> 
+              <input id="input14_14" type="button" class="textButton" onclick="getTextBox(14,14)" /> 
+              <input id="input14_15" type="button" class="textButton" onclick="getTextBox(14,15)" /> 
+              <input id="input14_16" type="button" class="textButton" onclick="getTextBox(14,16)" /> 
+              <input id="input15_13" type="button" class="textButton" onclick="getTextBox(15,13)" /> 
+              <input id="input15_14" type="button" class="textButton" onclick="getTextBox(15,14)" /> 
+              <input id="input15_15" type="button" class="textButton" onclick="getTextBox(15,15)" /> 
+              <input id="input15_16" type="button" class="textButton" onclick="getTextBox(15,16)" /> 
+              <input id="input16_13" type="button" class="textButton" onclick="getTextBox(16,13)" /> 
+              <input id="input16_14" type="button" class="textButton" onclick="getTextBox(16,14)" /> 
+              <input id="input16_15" type="button" class="textButton" onclick="getTextBox(16,15)" /> 
+              <input id="input16_16" type="button" class="textButton" onclick="getTextBox(16,16)" /> 
+            </div>
+
+
+	    <div class="main_panel">
+	      <div class="number_button" onclick="number_write(1);">1</div>
+	      <div class="number_button" onclick="number_write(2);">2</div>
+	      <div class="number_button" onclick="number_write(3);">3</div>
+	      <div class="number_button" onclick="number_write(4);">4</div>
+	      <div class="number_button" onclick="number_write(5);">5</div>
+	      <div class="number_button" onclick="number_write(6);">6</div>
+	      <div class="number_button" onclick="number_write(7);">7</div>
+	      <div class="number_button" onclick="number_write(8);">8</div>
+	      <div class="number_button" onclick="number_write(9);">9</div>
+	      <div class="number_button" onclick="number_write(10);">10</div>
+	      <div class="number_button" onclick="number_write(11);">11</div>
+	      <div class="number_button" onclick="number_write(12);">12</div>
+	      <div class="number_button" onclick="number_write(13);">13</div>
+	      <div class="number_button" onclick="number_write(14);">14</div>
+	      <div class="number_button" onclick="number_write(15);">15</div>
+	      <div class="number_button" onclick="number_write(16);">16</div>
+	      <div class="number_button" onclick="number_c();">&#8592;</div>
+	    </div>
+
+
+	    <div id="buttons">
+	      <input type="button" class="indexPlayButton" value="Submit Solution!"    onClick="run();" \>
+	    </div>
+            
+	  </div>
+      </section>
+    </div>
+    <script src="numCells16.js"></script> 
+    <script src="16sudoku.js"></script> 
+    <script src="general.js"></script> 
+  </body>
 </html>
